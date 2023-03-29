@@ -1,25 +1,19 @@
-
-import logo from "./logo.svg";
-import "./App.css";
-
+import logo from './logo.svg';
+import './App.css';
 
 import Homepage from './Pages/Homepage';
 import Navigationbar from './Components/HomePage/Navigationbar';
-import AllRoutes from './Routes/AllRoutes';
-import Banner from './Components/HomePage/Banner';
+import LoginPage from './Pages/LoginPage';
+import { SingleProductPage } from './Pages/SingleProductPage';
 
 function App() {
   return (
     <div className="App">
-
-      
-
-   <AllRoutes/>
-
+      {/* <Navigationbar /> */}
+      {/* <LoginPage/> */}
+      <SingleProductPage />
     </div>
   );
 }
 
 export default App;
-
-{/*  */}
