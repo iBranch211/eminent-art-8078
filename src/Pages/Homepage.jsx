@@ -1,13 +1,8 @@
 import React from 'react'
-import ProductCard from '../Components/HomePage/ProductCard'
 
 const Homepage = () => {
   return (
-    <div>
-
-<ProductCard/>
-
-    </div>
+    <div>Homepage</div>
   )
 }
 
