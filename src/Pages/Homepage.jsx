@@ -1,14 +1,8 @@
-
-import ProductCard from '../Components/HomePage/ProductCard'
+import React from 'react'
 
 const Homepage = () => {
   return (
-    <div>
-
-<ProductCard/>
-
-    </div>
-
+    <div>Homepage</div>
   )
 }
 
