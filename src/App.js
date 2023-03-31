@@ -1,10 +1,17 @@
 import "./App.css";
-import { Wishlist } from "./Pages/Wishlist";
+
+import Homepage from "./Pages/Homepage";
+import Navigationbar from "./Components/HomePage/Navigationbar";
+
+
+import AllRoutes from "./Routes/AllRoutes";
+import Banner from "./Components/HomePage/Banner";
+
 
 function App() {
   return (
     <div className="App">
-      
+
     </div>
   );
 }
