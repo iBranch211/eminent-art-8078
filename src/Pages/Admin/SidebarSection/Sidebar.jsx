@@ -23,28 +23,28 @@ const Sidebar = () => {
         <h3 className="divTitle">Quick Menu</h3>
         <ul className="menuLists grid">
           <li className="listItem">
-            <Link to="/adminpage" className="menuLink flex">
+            <a href="#" className="menuLink flex">
               <IoMdSpeedometer className="icon" />
               <span className="smallText">Dashboard</span>
-            </Link>
+            </a>
           </li>
           <li className="listItem">
-            <Link to="/adminteam" className="menuLink flex">
+            <a href="#" className="menuLink flex">
               <MdDeliveryDining className="icon" />
               <span className="smallText">Team Members</span>
-            </Link>
+            </a>
           </li>
           <li className="listItem">
-            <Link to="/adminproducts" className="menuLink flex">
+            <a href="#" className="menuLink flex">
               <MdOutlineExplore className="icon" />
               <span className="smallText">Products</span>
-            </Link>
+            </a>
           </li>
           <li className="listItem">
-            <Link to="" className="menuLink flex">
+            <a href="#" className="menuLink flex">
               <BsTrophy className="icon" />
               <span className="smallText">Earnings</span>
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
@@ -90,7 +90,7 @@ const Sidebar = () => {
             Having trouble in Trendify, please contact us from for more
             questions.
           </p>
-          <button className="bttn">Go to help center</button>
+          <button className="btn">Go to help center</button>
         </div>
       </div>
     </div>

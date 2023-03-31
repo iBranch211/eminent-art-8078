@@ -16,16 +16,13 @@ import { Box, Breadcrumb,
   import { RxDoubleArrowRight } from "react-icons/rx";
 import Allfilters from './Allfilters'
 import FilterDrawer from './FilterDrawer'
-import { useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { getProducts } from '../../Redux/ProductReducer/action';
 import ProductCard from './ProductCard';
-import Pagination from './Pagination';
 
 const Sidebar = () => {
 const navigate=useNavigate()
-// const { path, category, sub_category } = useParams()
   const [searchParams,setSearchParams]=useSearchParams()
-  const [pageno,setpageno]=useState(1)
   let {loading, productsData, allData, params, filters}=useSelector((store)=>store.ProductReducer)
 let location=useLocation()
 
@@ -39,12 +36,9 @@ const urlPath = location.pathname.split("/");
 let price=199
 let data={
 params:{
-  tag:searchParams.getAll('categorytag'),
+  category:searchParams.getAll('category'),
     _sort: searchParams.get('sortingByPrice') && 'price',
-    _order: searchParams.get('sortingByPrice'),
-    price_gte:searchParams.getAll('sortrange').join('').split('-')[0] ,
-     price_lte: searchParams.getAll('sortrange').join('').split('-')[1] ,
-
+    _order: searchParams.get('sortingByPrice')
 }
 
 }
@@ -52,18 +46,15 @@ params:{
 const dispatch=useDispatch()
 
 useEffect(()=>{
-  let params={}
-  sortingByPrice && (params.sortingByPrice=sortingByPrice)
-  pageno && (params.pageno=pageno) 
-  setSearchParams(params)
-  },[sortingByPrice,pageno])
+  dispatch(getProducts(data))
+},[location.search])
 
   return (
     <>
      <Box
-          width={"98%"}
+          width={"90%"}
           margin="auto"
-          pt={{ base: "30px", md: "60px", lg: "80px" }}>
+          pt={{ base: "30px", md: "60px", lg: "150px" }}>
           {/* <FilterTag title={appliedFilters.subCategory_like} /> */}
           <Flex
             alignItems={"center"}
@@ -84,7 +75,7 @@ useEffect(()=>{
                 )}
             </Breadcrumb> 
           </Flex>
-          <Flex mb="10px" >
+          <Flex mb="10px" mt={{}}>
             {" "}
             <Button
               mr="2%"
@@ -93,16 +84,19 @@ useEffect(()=>{
               Go Back
             </Button>
             
+    {/* <FilterDrawer filterHeading={filters.filterHeading}  filterBrands={filters.filterBrands} price={price} /> */}
     <Box display={{ base: "block", sm: "block", md: "none" }}> <FilterDrawer />    
     </Box>
     <HStack
               display={{ base: "none", sm: "none", md: "block" }}></HStack>
           </Flex>
-          <Grid gridTemplateColumns={{ sm: "100%", md: "20% 78%" }} gap={"5px"}>
+          <Grid gridTemplateColumns={{ sm: "100%", md: "25% 75%" }} gap={"5px"}>
             {/* filters section start */}
             {/* for large screen */}
             <Box display={{ base: "none", sm: "none", md: "block" }}>
               <Allfilters
+                // filterHeading={filters.filterHeading}
+                // filterBrands={filters.filterBrands}
                 price={price}
                 handleGoBack={handleGoBack}
               />
@@ -127,11 +121,10 @@ useEffect(()=>{
                   justify={"space-between"}>
                   <Text fontSize={"xl"}>Sort</Text>
                   <Select
-                    placeholder="Sort in Order"
+                    placeholder="Select option"
                     w="80%"
                     //value={sortingByPrice.order}
                     onChange={(e) =>setSortingByPrice(e.target.value)}>
-                      
                     <option value="asc">Price: Low to High</option>
                     <option value="desc">Price: High to low</option>
                   </Select>
@@ -156,14 +149,18 @@ useEffect(()=>{
             </VStack>
           </Grid>
            <Box>
-             <Flex m='10px 30px 50px  ' justify={{ base: "center", md: "flex-end" }}>
+            <Flex justify={{ base: "center", md: "flex-end" }}>
               {productsData.length > 1 && (
                 <Pagination
-                  current={pageno}
-                  total={Math.ceil(100 /15)}
-                  handlePageChange={(page) =>setpageno(page) }  />
+                  current={params.page}
+                  total={Math.ceil(allData.length / params.limit)}
+                  handlePageChange={(page) => {
+                    params.page = page;
+                    dispatch(getProducts(params));
+                  }}
+                />
               )}
-            </Flex> 
+            </Flex>
           </Box> 
         </Box>
       </>
