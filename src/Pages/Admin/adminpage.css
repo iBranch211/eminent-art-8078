@@ -58,7 +58,7 @@ li {
   gap: 1.5rem;
 }
 
-.bttn {
+.btn {
   border: none;
   outline: none;
   cursor: pointer;
@@ -68,11 +68,11 @@ li {
   color: var(--textColor);
 }
 
-.bttn .icon {
+.btn .icon {
   margin-left: 0.5rem;
 }
 
-.bttn:hover {
+.btn:hover {
   background: var(--paleGreen);
   color: var(--PrimaryColor);
 }
@@ -85,7 +85,7 @@ li {
   padding: 1rem;
 }
 
-.containerAdmin {
+.container {
   position: relative;
   width: 95vw;
   height: 95vh;
