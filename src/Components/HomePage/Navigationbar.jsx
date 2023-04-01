@@ -8,20 +8,13 @@ import { CiLocationOn } from 'react-icons/ci'
 import { BsBell, BsHeart, BsCart3, BsSearch } from 'react-icons/bs'
 import "./Navigationabar.module.css"
 import { NavLink } from 'react-router-dom'
-
-import { TbLogin } from "react-icons/tb";
 const Navigationbar = () => {
   return (
     <Box position='sticky' top='0' left='0' right='0' p={3} w='100%' overflow='hidden' m={'auto'} zIndex='1000' backgroundColor='#fff'>
       <Flex justify='space-around'>
         <Box w='20%' mx='20px'>
           <Center w='80%' >
-            <button>
-              <NavLink to="/">
-
-                <Image src={trendify_logo} />
-              </NavLink>
-            </button>
+            <Image src={trendify_logo} />
           </Center>
         </Box>
         <HStack h='2cm' role='search' w='60%' display='inline-flex' >
@@ -39,11 +32,6 @@ const Navigationbar = () => {
           <Icon as={BsBell} />
           <Icon as={BsHeart} />
           <Icon as={BsCart3} />
-          <NavLink to='/login'>
-
-            <TbLogin />
-          </NavLink>
-
         </HStack>
 
         <Box w='5%'>
@@ -62,14 +50,14 @@ const Navigationbar = () => {
         </Flex>
       </Box>
 
-    </Box >
+    </Box>
   )
 }
 
-const LineNavCompo = ({ name, key }) => {
+const LineNavCompo = ({ name}) => {
 
   return (
-    <Center cursor='pointer' textAlign='center' w='180px' fontSize='13px' h='1cm' key={key} href='#' _hover={{ color: '#24a3b5' }}>
+    <Center cursor='pointer' textAlign='center' w='180px' fontSize='13px' h='1cm' href='#' _hover={{ color: '#24a3b5' }}>
       {name}
     </Center>
   )
