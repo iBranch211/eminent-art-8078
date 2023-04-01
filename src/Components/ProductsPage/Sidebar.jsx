@@ -9,9 +9,10 @@ import { Box, Breadcrumb,
   HStack,
   Image,
   Select,
+  Spinner,
   Text,
   VStack, } from '@chakra-ui/react'
-  import React, { useEffect,useState } from "react";
+  import React, { useCallback, useEffect,useState } from "react";
   import { useDispatch, useSelector } from "react-redux";
   import { RxDoubleArrowRight } from "react-icons/rx";
 import Allfilters from './Allfilters'
@@ -20,34 +21,22 @@ import { useLocation, useNavigate, useParams, useSearchParams } from 'react-rout
 import { getProducts } from '../../Redux/ProductReducer/action';
 import ProductCard from './ProductCard';
 import Pagination from './Pagination';
+import { memo } from 'react';
+import NotfoundCategory from '../../Pages/NotfoundCategory';
 
 const Sidebar = () => {
 const navigate=useNavigate()
-// const { path, category, sub_category } = useParams()
+ const { path, category } = useParams()
   const [searchParams,setSearchParams]=useSearchParams()
   const [pageno,setpageno]=useState(1)
-  let {loading, productsData, allData, params, filters}=useSelector((store)=>store.ProductReducer)
+  let {loading, productsData,  }=useSelector((store)=>store.ProductReducer)
 let location=useLocation()
-
+let breadcrumblinks=searchParams.toString().split('&').join(' ').split('=')
 const initialsortdata =searchParams.get('sortingByPrice')
-   
 const[sortingByPrice,setSortingByPrice]=useState(initialsortdata || '' )
-const handleGoBack = () => {
-  navigate(-1);
-};
-const urlPath = location.pathname.split("/");
-let price=199
-let data={
-params:{
-  tag:searchParams.getAll('categorytag'),
-    _sort: searchParams.get('sortingByPrice') && 'price',
-    _order: searchParams.get('sortingByPrice'),
-    price_gte:searchParams.getAll('sortrange').join('').split('-')[0] ,
-     price_lte: searchParams.getAll('sortrange').join('').split('-')[1] ,
-
-}
-
-}
+const handleGoBack = useCallback(() => {
+    navigate('/')
+},[])
 
 const dispatch=useDispatch()
 
@@ -58,30 +47,36 @@ useEffect(()=>{
   setSearchParams(params)
   },[sortingByPrice,pageno])
 
+
+
   return (
     <>
      <Box
           width={"98%"}
           margin="auto"
           pt={{ base: "30px", md: "60px", lg: "80px" }}>
-          {/* <FilterTag title={appliedFilters.subCategory_like} /> */}
+        
           <Flex
-            alignItems={"center"}
-            // mt={{ base: "10px", sm: "10px", md: "10px", lg: "0px" }}
+            alignItems={"left"}
+            
             pb={{ base: "10px", sm: "5px" }}>
              <Breadcrumb separator="/" fontSize={{ base: "16px", md: "18px" }}>
-              {urlPath &&
-                urlPath.map((path, i) =>
-                  i > 1 && i < 4 ? (
-                    <BreadcrumbItem key={i}>
-                      <BreadcrumbLink href="#">{path}</BreadcrumbLink>
+             
+                    <BreadcrumbItem>
+                      <BreadcrumbLink href="/products">products</BreadcrumbLink>
                     </BreadcrumbItem>
-                  ) : i === 4 ? (
-                    <BreadcrumbItem key={i}>
-                      <Text>{path.split("%20").join(" ")}</Text>
+                    <BreadcrumbItem >
+                      <Text>{category?category:'men'}</Text>
                     </BreadcrumbItem>
-                  ) : null
-                )}
+{
+  breadcrumblinks.map((el,i)=> {
+    if(i%2==1 &&  el!=='brandrange' && el !=='categorytag' && el !=='sortrange'  ){
+      return <BreadcrumbItem key={i} >
+      <Text>{el.length>1?el.split(' ')[0]:el}</Text>
+    </BreadcrumbItem>
+    }
+  } )
+}
             </Breadcrumb> 
           </Flex>
           <Flex mb="10px" >
@@ -103,7 +98,7 @@ useEffect(()=>{
             {/* for large screen */}
             <Box display={{ base: "none", sm: "none", md: "block" }}>
               <Allfilters
-                price={price}
+              
                 handleGoBack={handleGoBack}
               />
             </Box>
@@ -145,13 +140,20 @@ useEffect(()=>{
                   lg: "repeat(4,1fr)",
                 }}
                 gap="5">
-                {productsData &&
-                  productsData.map((e) => (
+                { productsData &&  productsData.length>0 ?(
+                  productsData?.map((e) => (
                     <ProductCard
                       key={e.id}
                     {...e}
-                    />
-                  ))}
+                    />) 
+
+                  )): ( <> <Spinner />     
+
+                 </> 
+                  
+                  
+                  )
+                }
               </Grid>
             </VStack>
           </Grid>
@@ -171,4 +173,4 @@ useEffect(()=>{
   )
 }
 
-export default Sidebar
+export default memo(Sidebar)

@@ -1,6 +1,6 @@
 import { Box, HStack, Text, Image, Button, VStack } from "@chakra-ui/react";
-import {  useEffect, useState } from "react";
-import {  useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const RightDiv = () => {
 
@@ -34,18 +34,11 @@ export const RightDiv = () => {
    const[ wishlistData,setWishlistData]=useState(Items)
   const handleDelete=(item)=>{
    let x = wishlistData.filter((el)=>
-     +el.id!==+item.id
+     +el.id!=+item.id
     )
  setWishlistData(x)
   }
-  //console.log(wishlistData)
-  // useEffect(()=>{
-  //   localStorage.setItem("listLength",JSON.stringify(Items.length))
-  // },[Items.length])
-
-  useEffect(()=>{
-    
-  })
+  console.log(wishlistData)
   return (
     <Box
       w="67%"
