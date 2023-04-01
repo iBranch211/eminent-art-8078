@@ -18,6 +18,7 @@ import { FooterUpper } from './HomeComponents/FooterUpper';
 import { Footer } from './HomeComponents/Footer';
 import Navigationbar from '../Components/HomePage/Navigationbar';
 import NavbarDrop from "./HomeComponents/NavbarDrop"
+import Navbar from './HomeComponents/Navbar';
 export const Home = () => {
 
     const responsive = {
@@ -41,7 +42,8 @@ export const Home = () => {
     };
     return (
         <>
-            <Navigationbar />
+            {/* <Navigationbar /> */}
+            <Navbar/>
             <NavbarDrop />
             <Carousels />
             <DIV >
@@ -242,7 +244,6 @@ export const Home = () => {
 
 const DIV = styled.div`
     /* background: #e1fbff; */
-    background-color:#e9f6f7;
 .heading-home-page{
     margin-top: 52px;
     display: flex;

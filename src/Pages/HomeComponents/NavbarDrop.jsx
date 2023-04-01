@@ -12,16 +12,19 @@ import {
 } from "@chakra-ui/react"
 import { Link } from 'react-router-dom'
 // import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
-import Navbar from "./NavBar.css"
 // import Navbar from "./"
+
+import NavBar from "./NavBar.css"
+// import "./NavBar.css"
 function NavDropdown() {
 
     return (
 
         <div className='outSide'>
             <HStack gap='5' ml={2} >
+
                 <Menu >
-                    <MenuButton className='MenuButton' >
+                    <MenuButton style={{ color: "black" }}  className='MenuButton' >
                         MOBILE & MORE
                     </MenuButton>
 
@@ -221,7 +224,7 @@ function NavDropdown() {
                 </Menu>
                 {/* ****************************************222222222222222222************************************************************ */}
                 <Menu>
-                    <MenuButton className='MenuButton' >
+                    <MenuButton style={{ color: "black" }} className='MenuButton' >
                         MEN
                     </MenuButton>
 
@@ -501,12 +504,9 @@ function NavDropdown() {
                     {/* ******************************************3333333333333333333333333333333333333************************************ */}
                 </Menu>
                 <Menu>
-                <Link to={`/products/women`}>
-                <MenuButton className='MenuButton' >
+                    <MenuButton style={{ color: "black" }} className='MenuButton' >
                         WOMEN
                     </MenuButton>
-                </Link>
-                   
                     <MenuList marginTop='20px' soli marginLeft={-100}>
                         <Flex gap={5}>
 
@@ -744,7 +744,7 @@ function NavDropdown() {
 
                 </Menu>
                 <Menu>
-                    <MenuButton className='MenuButton'>
+                    <MenuButton style={{ color: "black" }} className='MenuButton'>
                         HOME & KITCHEN
                     </MenuButton>
                     <MenuList marginTop='20px' marginLeft="-300px">
@@ -913,7 +913,7 @@ function NavDropdown() {
                 <Menu>
 
 
-                    <MenuButton className='MenuButton'  >
+                    <MenuButton style={{ color: "black" }} className='MenuButton'  >
                         APPLIANCES
                     </MenuButton>
 
@@ -1104,7 +1104,7 @@ function NavDropdown() {
                 <Menu>
 
 
-                    <MenuButton className='MenuButton' >
+                    <MenuButton style={{ color: "black" }} className='MenuButton' >
                         SPORTS & MORE
                     </MenuButton>
 
@@ -1352,7 +1352,7 @@ function NavDropdown() {
 
 
                 <Menu>
-                    <MenuButton className='MenuButton'>
+                    <MenuButton style={{ color: "black" }} className='MenuButton'>
                         ESSENTIALS
                     </MenuButton>
 
@@ -1361,7 +1361,7 @@ function NavDropdown() {
 
 
                 <Menu>
-                    <MenuButton className='MenuButton' >
+                    <MenuButton style={{ color: "black" }} className='MenuButton' >
                         OFFERS
                     </MenuButton>
                     <MenuList border='none' marginTop='20px' marginLeft='-800px'  >
@@ -1448,7 +1448,7 @@ function NavDropdown() {
 
 
                 <Menu>
-                    <MenuButton className='MenuButton'>
+                    <MenuButton style={{ color: "black" }} className='MenuButton'>
                         GLOBAL SHOPPING
                     </MenuButton>
 

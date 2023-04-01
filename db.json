@@ -41,8 +41,7 @@
       "rating": "3.9",
       "reviews": "906 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "levis"
+      "tag": "saree"
     },
     {
       "id": 2,
@@ -53,7 +52,6 @@
       "rating": "3.7",
       "reviews": "27596 Reviews",
       "category": "women",
-      "brand": "levis",
       "tag": "saree"
     },
     {
@@ -64,7 +62,6 @@
       "price": 280,
       "rating": "3.7",
       "reviews": "23947 Reviews",
-      "brand": "levis",
       "category": "women",
       "tag": "saree"
     },
@@ -77,8 +74,7 @@
       "rating": "3.7",
       "reviews": "1485 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "levis"
+      "tag": "saree"
     },
     {
       "id": 5,
@@ -89,8 +85,7 @@
       "rating": "3.8",
       "reviews": "17656 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "levis"
+      "tag": "Kurtis"
     },
     {
       "id": 6,
@@ -101,8 +96,7 @@
       "rating": "4.0",
       "reviews": "55026 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Hilfiger"
+      "tag": "saree"
     },
     {
       "id": 7,
@@ -113,8 +107,7 @@
       "rating": "3.8",
       "reviews": "747 Reviews",
       "category": "women",
-      "tag": "Dupattas",
-      "brand": "Hilfiger"
+      "tag": "Dupattas"
     },
     {
       "id": 8,
@@ -125,8 +118,7 @@
       "rating": "3.6",
       "reviews": "31013 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Hilfiger"
+      "tag": "saree"
     },
     {
       "id": 9,
@@ -137,8 +129,7 @@
       "rating": "3.9",
       "reviews": "18818 Reviews",
       "category": "women",
-      "tag": "Blouse",
-      "brand": "Hilfiger"
+      "tag": "Blouse"
     },
     {
       "id": 10,
@@ -148,8 +139,7 @@
       "rating": "3.9",
       "reviews": "10897 Reviews",
       "category": "women",
-      "tag": "Petticoats",
-      "brand": "Hilfiger"
+      "tag": "Petticoats"
     },
     {
       "id": 11,
@@ -160,8 +150,7 @@
       "rating": "3.7",
       "reviews": "27215 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Hilfiger"
+      "tag": "Kurtis"
     },
     {
       "id": 12,
@@ -171,8 +160,7 @@
       "rating": "3.6",
       "reviews": "10357 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Hilfiger"
+      "tag": "saree"
     },
     {
       "id": 13,
@@ -183,8 +171,7 @@
       "rating": "4.0",
       "reviews": "2305 Reviews",
       "category": "women",
-      "tag": "Pants",
-      "brand": "Calvin"
+      "tag": "Pants"
     },
     {
       "id": 14,
@@ -195,8 +182,7 @@
       "rating": "4.0",
       "reviews": "4399 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Calvin"
+      "tag": "saree"
     },
     {
       "id": 15,
@@ -206,8 +192,7 @@
       "rating": "3.7",
       "reviews": "57588 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Calvin"
+      "tag": "Kurtis"
     },
     {
       "id": 16,
@@ -218,8 +203,7 @@
       "rating": "3.9",
       "reviews": "618 Reviews",
       "category": "women",
-      "tag": "Petticoats",
-      "brand": "Calvin"
+      "tag": "Petticoats"
     },
     {
       "id": 17,
@@ -230,8 +214,7 @@
       "rating": "3.8",
       "reviews": "2171 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Calvin"
+      "tag": "Kurtis"
     },
     {
       "id": 18,
@@ -242,8 +225,7 @@
       "rating": "3.8",
       "reviews": "30697 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Calvin"
+      "tag": "saree"
     },
     {
       "id": 19,
@@ -254,8 +236,7 @@
       "rating": "4.0",
       "reviews": "12531 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Calvin"
+      "tag": "saree"
     },
     {
       "id": 20,
@@ -265,8 +246,7 @@
       "rating": "3.7",
       "reviews": "70501 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Calvin"
+      "tag": "Kurtis"
     },
     {
       "id": 21,
@@ -277,8 +257,7 @@
       "rating": "3.9",
       "reviews": "12097 Reviews",
       "category": "women",
-      "tag": "Blouse",
-      "brand": "Calvin"
+      "tag": "Blouse"
     },
     {
       "id": 22,
@@ -289,8 +268,7 @@
       "rating": "3.7",
       "reviews": "690 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Calvin"
+      "tag": "saree"
     },
     {
       "id": 23,
@@ -301,8 +279,7 @@
       "rating": "4.0",
       "reviews": "46174 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Zara"
+      "tag": "saree"
     },
     {
       "id": 24,
@@ -313,8 +290,7 @@
       "rating": "3.8",
       "reviews": "5860 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Zara"
+      "tag": "Kurtis"
     },
     {
       "id": 25,
@@ -325,8 +301,7 @@
       "rating": "4.1",
       "reviews": "49 Reviews",
       "category": "women",
-      "tag": "Petticoats",
-      "brand": "Zara"
+      "tag": "Petticoats"
     },
     {
       "id": 26,
@@ -337,8 +312,7 @@
       "rating": "4.0",
       "reviews": "8296 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Zara"
+      "tag": "saree"
     },
     {
       "id": 27,
@@ -349,8 +323,7 @@
       "rating": "3.7",
       "reviews": "52871 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Zara"
+      "tag": "Kurtis"
     },
     {
       "id": 28,
@@ -361,8 +334,7 @@
       "rating": "3.7",
       "reviews": "50 Reviews",
       "category": "women",
-      "tag": "Petticoats",
-      "brand": "Zara"
+      "tag": "Petticoats"
     },
     {
       "id": 29,
@@ -373,8 +345,7 @@
       "rating": "3.6",
       "reviews": "30557 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Zara"
+      "tag": "saree"
     },
     {
       "id": 30,
@@ -385,8 +356,7 @@
       "rating": "3.9",
       "reviews": "6302 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Zara"
+      "tag": "Kurtis"
     },
     {
       "id": 31,
@@ -397,8 +367,7 @@
       "rating": "3.8",
       "reviews": "2266 Reviews",
       "category": "women",
-      "tag": "women",
-      "brand": "Zara"
+      "tag": "women"
     },
     {
       "id": 32,
@@ -409,8 +378,7 @@
       "rating": "4.0",
       "reviews": "51215 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Zara"
+      "tag": "Kurtis"
     },
     {
       "id": 33,
@@ -421,8 +389,7 @@
       "rating": "4.0",
       "reviews": "54367 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Zara"
+      "tag": "saree"
     },
     {
       "id": 34,
@@ -433,8 +400,7 @@
       "rating": "3.6",
       "reviews": "1162 Reviews",
       "category": "women",
-      "tag": "Dupattas",
-      "brand": "Zara"
+      "tag": "Dupattas"
     },
     {
       "id": 35,
@@ -445,8 +411,7 @@
       "rating": "3.8",
       "reviews": "11102 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Zara"
+      "tag": "Kurtis"
     },
     {
       "id": 36,
@@ -457,8 +422,7 @@
       "rating": "3.8",
       "reviews": "22117 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Fitch"
+      "tag": "saree"
     },
     {
       "id": 37,
@@ -469,8 +433,7 @@
       "rating": "4.1",
       "reviews": "7203 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Fitch"
+      "tag": "saree"
     },
     {
       "id": 38,
@@ -481,8 +444,7 @@
       "rating": "4.0",
       "reviews": "35685 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Fitch"
+      "tag": "Kurtis"
     },
     {
       "id": 39,
@@ -493,8 +455,7 @@
       "rating": "3.9",
       "reviews": "16408 Reviews",
       "category": "women",
-      "tag": "blouse",
-      "brand": "Fitch"
+      "tag": "blouse"
     },
     {
       "id": 40,
@@ -505,8 +466,7 @@
       "rating": "3.7",
       "reviews": "6 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Fitch"
+      "tag": "saree"
     },
     {
       "id": 42,
@@ -517,8 +477,7 @@
       "rating": "3.9",
       "reviews": "6454 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Fitch"
+      "tag": "saree"
     },
     {
       "id": 43,
@@ -529,8 +488,7 @@
       "rating": "3.9",
       "reviews": "698 Reviews",
       "category": "women",
-      "tag": "Dupattas",
-      "brand": "Fitch"
+      "tag": "Dupattas"
     },
     {
       "id": 44,
@@ -541,8 +499,7 @@
       "rating": "4.0",
       "reviews": "7662 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Fitch"
+      "tag": "Kurtis"
     },
     {
       "id": 45,
@@ -553,8 +510,7 @@
       "rating": "3.9",
       "reviews": "4725 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Fitch"
+      "tag": "Kurtis"
     },
     {
       "id": 46,
@@ -565,8 +521,7 @@
       "rating": "3.9",
       "reviews": "321 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Fitch"
+      "tag": "saree"
     },
     {
       "id": 47,
@@ -577,8 +532,7 @@
       "rating": "3.7",
       "reviews": "8379 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Fitch"
+      "tag": "Kurtis"
     },
     {
       "id": 48,
@@ -589,8 +543,7 @@
       "rating": "3.6",
       "reviews": "18688 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Fitch"
+      "tag": "saree"
     },
     {
       "id": 49,
@@ -601,8 +554,7 @@
       "rating": "3.9",
       "reviews": "649 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Fitch"
+      "tag": "Kurtis"
     },
     {
       "id": 50,
@@ -613,8 +565,7 @@
       "rating": "3.6",
       "reviews": "15919 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Fitch"
+      "tag": "saree"
     },
     {
       "id": 51,
@@ -625,8 +576,7 @@
       "rating": "3.8",
       "reviews": "1139 Reviews",
       "category": "women",
-      "tag": "saree",
-      "brand": "Fitch"
+      "tag": "saree"
     },
     {
       "id": 52,
@@ -637,8 +587,7 @@
       "rating": "3.8",
       "reviews": "205 Reviews",
       "category": "women",
-      "tag": "Dupattas",
-      "brand": "Fitch"
+      "tag": "Dupattas"
     },
     {
       "id": 53,
@@ -649,8 +598,7 @@
       "rating": "3.8",
       "reviews": "5988 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Fitch"
+      "tag": "Kurtis"
     },
     {
       "id": 54,
@@ -661,8 +609,7 @@
       "rating": "4.4",
       "reviews": "50 Reviews",
       "category": "women",
-      "tag": "salwar",
-      "brand": "Fitch"
+      "tag": "salwar"
     },
     {
       "id": 55,
@@ -672,8 +619,7 @@
       "rating": "3.6",
       "reviews": "640 Reviews",
       "category": "women",
-      "tag": "Dupattas",
-      "brand": "Fitch"
+      "tag": "Dupattas"
     },
     {
       "id": 56,
@@ -683,8 +629,7 @@
       "rating": "4.0",
       "reviews": "26854 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Fitch"
+      "tag": "Kurtis"
     },
     {
       "id": 57,
@@ -695,8 +640,7 @@
       "rating": "3.5",
       "reviews": "9399 Reviews",
       "category": "women",
-      "tag": "Kurtis",
-      "brand": "Fitch"
+      "tag": "Kurtis"
     },
     {
       "id": 58,
@@ -707,8 +651,7 @@
       "rating": "3.7",
       "reviews": "55 Reviews",
       "category": "women",
-      "tag": "Petticoats",
-      "brand": "Fitch"
+      "tag": "Petticoats"
     },
     {
       "id": 59,
@@ -719,8 +662,7 @@
       "rating": "4.2",
       "reviews": "400 Reviews",
       "category": "men",
-      "tag": "topwear",
-      "brand": "Fitch"
+      "tag": "topwear"
     },
     {
       "id": 60,
@@ -731,8 +673,7 @@
       "rating": "3.9",
       "reviews": "32669 Reviews",
       "category": "men",
-      "tag": "topwear",
-      "brand": "Fitch"
+      "tag": "topwear"
     },
     {
       "id": 61,
@@ -742,8 +683,7 @@
       "rating": "3.9",
       "reviews": "25920 Reviews",
       "category": "men",
-      "tag": "topwear",
-      "brand": "Hollister"
+      "tag": "topwear"
     },
     {
       "id": 62,
@@ -754,8 +694,7 @@
       "rating": "3.9",
       "reviews": "300 Reviews",
       "category": "men",
-      "tag": "topwear",
-      "brand": "Hollister"
+      "tag": "topwear"
     },
     {
       "id": 63,
@@ -766,8 +705,7 @@
       "rating": "3.9",
       "reviews": "32195 Reviews",
       "category": "men",
-      "tag": "topwear",
-      "brand": "Hollister"
+      "tag": "topwear"
     },
     {
       "id": 64,
@@ -778,8 +716,7 @@
       "rating": "4.0",
       "reviews": "92970 Reviews",
       "category": "men",
-      "tag": "topwear",
-      "brand": "Hollister"
+      "tag": "topwear"
     },
     {
       "id": 65,
@@ -790,8 +727,7 @@
       "rating": "4.0",
       "reviews": "756 Reviews",
       "category": "men",
-      "tag": "topwear",
-      "brand": "Hollister"
+      "tag": "topwear"
     },
     {
       "id": 66,
@@ -802,8 +738,7 @@
       "rating": "3.8",
       "reviews": "18456 Reviews",
       "category": "men",
-      "tag": "topwear",
-      "brand": "Hollister"
+      "tag": "topwear"
     },
     {
       "id": 67,
@@ -814,8 +749,7 @@
       "rating": "3.7",
       "reviews": "7139 Reviews",
       "category": "men",
-      "tag": "topwear",
-      "brand": "Hollister"
+      "tag": "topwear"
     },
     {
       "id": 68,
@@ -826,8 +760,7 @@
       "rating": "3.7",
       "reviews": "158 Reviews",
       "category": "men",
-      "tag": "topwear",
-      "brand": "Hollister"
+      "tag": "topwear"
     },
     {
       "id": 69,
@@ -838,8 +771,7 @@
       "rating": "3.8",
       "reviews": "6376 Reviews",
       "category": "men",
-      "tag": "bottomwear",
-      "brand": "Hollister"
+      "tag": "bottomwear"
     },
     {
       "id": 70,
@@ -849,8 +781,7 @@
       "rating": "3.8",
       "reviews": "6 Reviews",
       "category": "men",
-      "tag": "bottomwear",
-      "brand": "Hollister"
+      "tag": "bottomwear"
     },
     {
       "id": 71,
@@ -860,8 +791,7 @@
       "rating": "3.6",
       "reviews": "5028 Reviews",
       "category": "men",
-      "tag": "bottomwear",
-      "brand": "Hollister"
+      "tag": "bottomwear"
     },
     {
       "id": 72,
@@ -871,8 +801,7 @@
       "rating": "3.6",
       "reviews": "1268 Reviews",
       "category": "men",
-      "tag": "bottomwear",
-      "brand": "Hollister"
+      "tag": "bottomwear"
     },
     {
       "id": 73,
@@ -882,8 +811,7 @@
       "rating": "3.7",
       "reviews": "2269 Reviews",
       "category": "men",
-      "tag": "bottomwear",
-      "brand": "Hollister"
+      "tag": "bottomwear"
     },
     {
       "id": 74,
@@ -894,8 +822,7 @@
       "rating": "3.9",
       "reviews": "453 Reviews",
       "category": "men",
-      "tag": "bottomwear",
-      "brand": "Hollister"
+      "tag": "bottomwear"
     },
     {
       "id": 75,
@@ -905,8 +832,7 @@
       "rating": "3.8",
       "reviews": "4019 Reviews",
       "category": "men",
-      "tag": "bottomwear",
-      "brand": "Hollister"
+      "tag": "bottomwear"
     },
     {
       "id": 76,
@@ -916,8 +842,7 @@
       "rating": "3.6",
       "reviews": "9496 Reviews",
       "category": "men",
-      "tag": "bottomwear",
-      "brand": "Hollister"
+      "tag": "bottomwear"
     },
     {
       "id": 77,
@@ -927,8 +852,7 @@
       "rating": "3.8",
       "reviews": "1977 Reviews",
       "category": "men",
-      "tag": "bottomwear",
-      "brand": "Hollister"
+      "tag": "bottomwear"
     },
     {
       "id": 78,
@@ -938,8 +862,7 @@
       "rating": "3.7",
       "reviews": "2266 Reviews",
       "category": "men",
-      "tag": "bottomwear",
-      "brand": "Outfitters"
+      "tag": "bottomwear"
     },
     {
       "id": 79,
@@ -949,8 +872,7 @@
       "rating": "3.4",
       "reviews": "26 Reviews",
       "category": "men",
-      "tag": "menaccessories",
-      "brand": "Outfitters"
+      "tag": "menaccessories"
     },
     {
       "id": 80,
@@ -960,8 +882,7 @@
       "rating": "3.8",
       "reviews": "426 Reviews",
       "category": "men",
-      "tag": "menaccessories",
-      "brand": "Outfitters"
+      "tag": "menaccessories"
     },
     {
       "id": 81,
@@ -971,8 +892,7 @@
       "rating": "3.8",
       "reviews": "3144 Reviews",
       "category": "men",
-      "tag": "menaccessories",
-      "brand": "Outfitters"
+      "tag": "menaccessories"
     },
     {
       "id": 82,
@@ -982,8 +902,7 @@
       "rating": "3.6",
       "reviews": "2132 Reviews",
       "category": "men",
-      "tag": "menaccessories",
-      "brand": "Outfitters"
+      "tag": "menaccessories"
     },
     {
       "id": 83,
@@ -994,8 +913,7 @@
       "rating": "4.6",
       "reviews": "494 Reviews",
       "category": "men",
-      "tag": "menaccessories",
-      "brand": "Outfitters"
+      "tag": "menaccessories"
     },
     {
       "id": 84,
@@ -1006,8 +924,7 @@
       "rating": "3.9",
       "reviews": "418 Reviews",
       "category": "men",
-      "tag": "menaccessories",
-      "brand": "Outfitters"
+      "tag": "menaccessories"
     },
     {
       "id": 85,
@@ -1017,8 +934,7 @@
       "rating": "3.8",
       "reviews": "4637 Reviews",
       "category": "men",
-      "tag": "menaccessories",
-      "brand": "Outfitters"
+      "tag": "menaccessories"
     },
     {
       "id": 86,
@@ -1029,8 +945,7 @@
       "rating": "3.6",
       "reviews": "91 Reviews",
       "category": "men",
-      "tag": "menaccessories",
-      "brand": "Outfitters"
+      "tag": "menaccessories"
     },
     {
       "id": 87,
@@ -1041,8 +956,7 @@
       "rating": "3.9",
       "reviews": "1454 Reviews",
       "category": "men",
-      "tag": "menaccessories",
-      "brand": "Outfitters"
+      "tag": "menaccessories"
     },
     {
       "id": 88,
@@ -1053,8 +967,7 @@
       "rating": "3.9",
       "reviews": "1106 Reviews",
       "category": "men",
-      "tag": "menaccessories",
-      "brand": "Outfitters"
+      "tag": "menaccessories"
     },
     {
       "id": 89,
@@ -1064,8 +977,7 @@
       "rating": "3.5",
       "reviews": "23 Reviews",
       "category": "men",
-      "tag": "menfootwear",
-      "brand": "Outfitters"
+      "tag": "menfootwear"
     },
     {
       "id": 90,
@@ -1076,8 +988,7 @@
       "rating": "3.9",
       "reviews": "2556 Reviews",
       "category": "men",
-      "tag": "menfootwear",
-      "brand": "Outfitters"
+      "tag": "menfootwear"
     },
     {
       "id": 91,
@@ -1088,8 +999,7 @@
       "rating": "4.0",
       "reviews": "3093 Reviews",
       "category": "men",
-      "tag": "menfootwear",
-      "brand": "Outfitters"
+      "tag": "menfootwear"
     },
     {
       "id": 92,
@@ -1099,8 +1009,7 @@
       "rating": "4.0",
       "reviews": "713 Reviews",
       "category": "men",
-      "tag": "menfootwear",
-      "brand": "Outfitters"
+      "tag": "menfootwear"
     },
     {
       "id": 93,
@@ -1111,8 +1020,7 @@
       "rating": "4.0",
       "reviews": "1414 Reviews",
       "category": "men",
-      "tag": "menfootwear",
-      "brand": "Outfitters"
+      "tag": "menfootwear"
     },
     {
       "id": 94,
@@ -1123,8 +1031,7 @@
       "rating": "4.0",
       "reviews": "1839 Reviews",
       "category": "men",
-      "tag": "menfootwear",
-      "brand": "Victoria"
+      "tag": "menfootwear"
     },
     {
       "id": 95,
@@ -1135,8 +1042,7 @@
       "rating": "3.7",
       "reviews": "85 Reviews",
       "category": "men",
-      "tag": "menfootwear",
-      "brand": "Victoria"
+      "tag": "menfootwear"
     },
     {
       "id": 96,
@@ -1147,8 +1053,7 @@
       "rating": "4.0",
       "reviews": "5383 Reviews",
       "category": "men",
-      "tag": "menfootwear",
-      "brand": "Victoria"
+      "tag": "menfootwear"
     },
     {
       "id": 97,
@@ -1159,8 +1064,7 @@
       "rating": "4.0",
       "reviews": "1431 Reviews",
       "category": "men",
-      "tag": "menfootwear",
-      "brand": "Victoria"
+      "tag": "menfootwear"
     },
     {
       "id": 98,
@@ -1171,8 +1075,7 @@
       "rating": "4.1",
       "reviews": "32 Reviews",
       "category": "men",
-      "tag": "menfootwear",
-      "brand": "Victoria"
+      "tag": "menfootwear"
     },
     {
       "id": 99,
@@ -1183,8 +1086,7 @@
       "rating": "3.9",
       "reviews": "123 Reviews",
       "category": "men",
-      "tag": "Kurtas",
-      "brand": "Victoria"
+      "tag": "Kurtas"
     },
     {
       "id": 100,
@@ -1195,8 +1097,7 @@
       "rating": "4.0",
       "reviews": "2916 Reviews",
       "category": "men",
-      "tag": "Kurtas",
-      "brand": "Victoria"
+      "tag": "Kurtas"
     },
     {
       "id": 101,
@@ -1207,8 +1108,7 @@
       "rating": "4.0",
       "reviews": "5316 Reviews",
       "category": "men",
-      "tag": "Kurtas",
-      "brand": "Victoria"
+      "tag": "Kurtas"
     },
     {
       "id": 102,
@@ -1219,8 +1119,7 @@
       "rating": "3.9",
       "reviews": "325 Reviews",
       "category": "men",
-      "tag": "Kurtas",
-      "brand": "Victoria"
+      "tag": "Kurtas"
     },
     {
       "id": 103,
@@ -1231,8 +1130,7 @@
       "rating": "3.8",
       "reviews": "5789 Reviews",
       "category": "men",
-      "tag": "Kurtas",
-      "brand": "Victoria"
+      "tag": "Kurtas"
     },
     {
       "id": 104,
@@ -1243,8 +1141,7 @@
       "rating": "3.7",
       "reviews": "2430 Reviews",
       "category": "men",
-      "tag": "Kurtas",
-      "brand": "Victoria"
+      "tag": "Kurtas"
     },
     {
       "id": 105,
@@ -1255,8 +1152,7 @@
       "rating": "4.0",
       "reviews": "7 Reviews",
       "category": "men",
-      "tag": "Kurtas",
-      "brand": "Victoria"
+      "tag": "Kurtas"
     },
     {
       "id": 106,
@@ -1267,8 +1163,7 @@
       "rating": "3.9",
       "reviews": "230 Reviews",
       "category": "men",
-      "tag": "Kurtas",
-      "brand": "Victoria"
+      "tag": "Kurtas"
     },
     {
       "id": 107,
@@ -1279,8 +1174,7 @@
       "rating": "4.2",
       "reviews": "994 Reviews",
       "category": "men",
-      "tag": "Kurtas",
-      "brand": "Victoria"
+      "tag": "Kurtas"
     },
     {
       "id": 108,
@@ -1291,8 +1185,7 @@
       "rating": "4.3",
       "reviews": "878 Reviews",
       "category": "men",
-      "tag": "Kurtas",
-      "brand": "Victoria"
+      "tag": "Kurtas"
     },
     {
       "id": 109,
@@ -1303,8 +1196,7 @@
       "rating": "4.0",
       "reviews": "5 Reviews",
       "category": "Beauty & Health",
-      "tag": "MakeUp",
-      "brand": "Chanel"
+      "tag": "MakeUp"
     },
     {
       "id": 110,
@@ -1314,8 +1206,7 @@
       "rating": "3.9",
       "reviews": "3381 Reviews",
       "category": "Beauty & Health",
-      "tag": "MakeUp",
-      "brand": "Chanel"
+      "tag": "MakeUp"
     },
     {
       "id": 111,
@@ -1326,8 +1217,7 @@
       "rating": "3.8",
       "reviews": "26 Reviews",
       "category": "Beauty & Health",
-      "tag": "MakeUp",
-      "brand": "Chanel"
+      "tag": "MakeUp"
     },
     {
       "id": 112,
@@ -1338,8 +1228,7 @@
       "rating": "3.5",
       "reviews": "16 Reviews",
       "category": "Beauty & Health",
-      "tag": "MakeUp",
-      "brand": "Chanel"
+      "tag": "MakeUp"
     },
     {
       "id": 113,
@@ -1350,8 +1239,7 @@
       "rating": "3.6",
       "reviews": "39 Reviews",
       "category": "Beauty & Health",
-      "tag": "MakeUp",
-      "brand": "Chanel"
+      "tag": "MakeUp"
     },
     {
       "id": 114,
@@ -1362,8 +1250,7 @@
       "rating": "3.9",
       "reviews": "1844 Reviews",
       "category": "Beauty & Health",
-      "tag": "MakeUp",
-      "brand": "Chanel"
+      "tag": "MakeUp"
     },
     {
       "id": 115,
@@ -1373,8 +1260,7 @@
       "rating": "4.0",
       "reviews": "960 Reviews",
       "category": "Beauty & Health",
-      "tag": "MakeUp",
-      "brand": "Chanel"
+      "tag": "MakeUp"
     },
     {
       "id": 116,
@@ -1385,8 +1271,7 @@
       "rating": "3.6",
       "reviews": "629 Reviews",
       "category": "Beauty & Health",
-      "tag": "MakeUp",
-      "brand": "Chanel"
+      "tag": "MakeUp"
     },
     {
       "id": 117,
@@ -1397,8 +1282,7 @@
       "rating": "4.8",
       "reviews": "14 Reviews",
       "category": "Beauty & Health",
-      "tag": "MakeUp",
-      "brand": "Chanel"
+      "tag": "MakeUp"
     },
     {
       "id": 118,
@@ -1409,8 +1293,7 @@
       "rating": "3.4",
       "reviews": "89 Reviews",
       "category": "Beauty & Health",
-      "tag": "MakeUp",
-      "brand": "Chanel"
+      "tag": "MakeUp"
     },
     {
       "id": 119,
@@ -1421,8 +1304,7 @@
       "rating": "3.9",
       "reviews": "17 Reviews",
       "category": "Beauty & Health",
-      "tag": "oral care",
-      "brand": "Chanel"
+      "tag": "oral care"
     },
     {
       "id": 120,
@@ -1433,8 +1315,7 @@
       "rating": "3.6",
       "reviews": "1071 Reviews",
       "category": "Beauty & Health",
-      "tag": "oral care",
-      "brand": "NARS"
+      "tag": "oral care"
     },
     {
       "id": 121,
@@ -1445,8 +1326,7 @@
       "rating": "3.9",
       "reviews": "19 Reviews",
       "category": "Beauty & Health",
-      "tag": "oral care",
-      "brand": "NARS"
+      "tag": "oral care"
     },
     {
       "id": 122,
@@ -1457,8 +1337,7 @@
       "rating": "3.9",
       "reviews": "12 Reviews",
       "category": "Beauty & Health",
-      "tag": "oral care",
-      "brand": "NARS"
+      "tag": "oral care"
     },
     {
       "id": 123,
@@ -1469,8 +1348,7 @@
       "rating": "3.9",
       "reviews": "4 Reviews",
       "category": "Beauty & Health",
-      "tag": "oral care",
-      "brand": "NARS"
+      "tag": "oral care"
     },
     {
       "id": 124,
@@ -1480,8 +1358,7 @@
       "rating": "3.9",
       "reviews": "4 Reviews",
       "category": "Beauty & Health",
-      "tag": "oral care",
-      "brand": "NARS"
+      "tag": "oral care"
     },
     {
       "id": 125,
@@ -1492,8 +1369,7 @@
       "rating": "4.2",
       "reviews": "100 Reviews",
       "category": "Beauty & Health",
-      "tag": "oral care",
-      "brand": "NARS"
+      "tag": "oral care"
     },
     {
       "id": 126,
@@ -1504,8 +1380,7 @@
       "rating": "4.2",
       "reviews": "100 Reviews",
       "category": "Beauty & Health",
-      "tag": "oral care",
-      "brand": "NARS"
+      "tag": "oral care"
     },
     {
       "id": 127,
@@ -1516,8 +1391,7 @@
       "rating": "4.2",
       "reviews": "100 Reviews",
       "category": "Beauty & Health",
-      "tag": "oral care",
-      "brand": "NARS"
+      "tag": "oral care"
     },
     {
       "id": 128,
@@ -1528,8 +1402,7 @@
       "rating": "4.2",
       "reviews": "100 Reviews",
       "category": "Beauty & Health",
-      "tag": "oral care",
-      "brand": "NARS"
+      "tag": "oral care"
     },
     {
       "id": 129,
@@ -1540,8 +1413,7 @@
       "rating": "4.0",
       "reviews": "3602 Reviews",
       "category": "Beauty & Health",
-      "tag": "Lips",
-      "brand": "NARS"
+      "tag": "Lips"
     },
     {
       "id": 130,
@@ -1552,8 +1424,7 @@
       "rating": "4.0",
       "reviews": "872 Reviews",
       "category": "Beauty & Health",
-      "tag": "Lips",
-      "brand": "NARS"
+      "tag": "Lips"
     },
     {
       "id": 131,
@@ -1563,8 +1434,7 @@
       "rating": "4.0",
       "reviews": "7267 Reviews",
       "category": "Beauty & Health",
-      "tag": "Lips",
-      "brand": "NARS"
+      "tag": "Lips"
     },
     {
       "id": 133,
@@ -1574,8 +1444,7 @@
       "rating": "4.0",
       "reviews": "180 Reviews",
       "category": "Beauty & Health",
-      "tag": "Lips",
-      "brand": "NARS"
+      "tag": "Lips"
     },
     {
       "id": 134,
@@ -1586,8 +1455,7 @@
       "rating": "4.2",
       "reviews": "117 Reviews",
       "category": "Beauty & Health",
-      "tag": "Lips",
-      "brand": "Maybelline"
+      "tag": "Lips"
     },
     {
       "id": 135,
@@ -1598,8 +1466,7 @@
       "rating": "4.0",
       "reviews": "438 Reviews",
       "category": "Beauty & Health",
-      "tag": "Lips",
-      "brand": "Maybelline"
+      "tag": "Lips"
     },
     {
       "id": 136,
@@ -1610,8 +1477,7 @@
       "rating": "4.3",
       "reviews": "638 Reviews",
       "category": "Beauty & Health",
-      "tag": "Lips",
-      "brand": "Maybelline"
+      "tag": "Lips"
     },
     {
       "id": 137,
@@ -1622,8 +1488,7 @@
       "rating": "4.0",
       "reviews": "29 Reviews",
       "category": "Beauty & Health",
-      "tag": "Lips",
-      "brand": "Maybelline"
+      "tag": "Lips"
     },
     {
       "id": 138,
@@ -1634,8 +1499,7 @@
       "rating": "4.0",
       "reviews": "647 Reviews",
       "category": "Beauty & Health",
-      "tag": "Lips",
-      "brand": "Maybelline"
+      "tag": "Lips"
     },
     {
       "id": 139,
@@ -1646,8 +1510,7 @@
       "rating": "4.5",
       "reviews": "11 Reviews",
       "category": "Beauty & Health",
-      "tag": "Eyes",
-      "brand": "Maybelline"
+      "tag": "Eyes"
     },
     {
       "id": 140,
@@ -1658,8 +1521,7 @@
       "rating": "3.8",
       "reviews": "310 Reviews",
       "category": "Beauty & Health",
-      "tag": "Eyes",
-      "brand": "Maybelline"
+      "tag": "Eyes"
     },
     {
       "id": 141,
@@ -1670,8 +1532,7 @@
       "rating": "3.9",
       "reviews": "115 Reviews",
       "category": "Beauty & Health",
-      "tag": "Eyes",
-      "brand": "Maybelline"
+      "tag": "Eyes"
     },
     {
       "id": 142,
@@ -1682,8 +1543,7 @@
       "rating": "3.8",
       "reviews": "9 Reviews",
       "category": "Beauty & Health",
-      "tag": "Eyes",
-      "brand": "Maybelline"
+      "tag": "Eyes"
     },
     {
       "id": 143,
@@ -1694,8 +1554,7 @@
       "rating": "4.1",
       "reviews": "90 Reviews",
       "category": "Beauty & Health",
-      "tag": "Eyes",
-      "brand": "Maybelline"
+      "tag": "Eyes"
     },
     {
       "id": 144,
@@ -1706,8 +1565,7 @@
       "rating": "4.1",
       "reviews": "647 Reviews",
       "category": "Beauty & Health",
-      "tag": "Eyes",
-      "brand": "Maybelline"
+      "tag": "Eyes"
     },
     {
       "id": 145,
@@ -1718,8 +1576,7 @@
       "rating": "3.8",
       "reviews": "138 Reviews",
       "category": "Beauty & Health",
-      "tag": "Eyes",
-      "brand": "Maybelline"
+      "tag": "Eyes"
     },
     {
       "id": 146,
@@ -1730,8 +1587,7 @@
       "rating": "4.1",
       "reviews": "101 Reviews",
       "category": "Beauty & Health",
-      "tag": "Eyes",
-      "brand": "Maybelline"
+      "tag": "Eyes"
     },
     {
       "id": 147,
@@ -1742,8 +1598,7 @@
       "rating": "4.4",
       "reviews": "114 Reviews",
       "category": "Beauty & Health",
-      "tag": "Eyes",
-      "brand": "Revlon"
+      "tag": "Eyes"
     },
     {
       "id": 148,
@@ -1754,8 +1609,7 @@
       "rating": "3.8",
       "reviews": "84 Reviews",
       "category": "Beauty & Health",
-      "tag": "Eyes",
-      "brand": "Revlon"
+      "tag": "Eyes"
     },
     {
       "id": 149,
@@ -1766,8 +1620,7 @@
       "rating": "3.7",
       "reviews": "357 Reviews",
       "category": "Beauty & Health",
-      "tag": "Sanitizers",
-      "brand": "Revlon"
+      "tag": "Sanitizers"
     },
     {
       "id": 150,
@@ -1778,8 +1631,7 @@
       "rating": "4.0",
       "reviews": "277 Reviews",
       "category": "Beauty & Health",
-      "tag": "Sanitizers",
-      "brand": "Revlon"
+      "tag": "Sanitizers"
     },
     {
       "id": 151,
@@ -1790,8 +1642,7 @@
       "rating": "3.7",
       "reviews": "5 Reviews",
       "category": "Beauty & Health",
-      "tag": "Sanitizers",
-      "brand": "Revlon"
+      "tag": "Sanitizers"
     },
     {
       "id": 152,
@@ -1801,9 +1652,8 @@
       "price": 750,
       "rating": "4.4",
       "reviews": "192 Reviews",
-      "category": "Wellness",
-      "tag": "Sanitizers",
-      "brand": "Revlon"
+      "category": "Delivery287",
+      "tag": "Delivery287"
     },
     {
       "id": 153,
@@ -1813,8 +1663,7 @@
       "rating": "4.2",
       "reviews": "10 Reviews",
       "category": "Beauty & Health",
-      "tag": "Sanitizers",
-      "brand": "Revlon"
+      "tag": "Sanitizers"
     },
     {
       "id": 154,
@@ -1825,8 +1674,7 @@
       "rating": "4.2",
       "reviews": "16 Reviews",
       "category": "Beauty & Health",
-      "tag": "Sanitizers",
-      "brand": "Revlon"
+      "tag": "Sanitizers"
     },
     {
       "id": 155,
@@ -1836,9 +1684,8 @@
       "price": 715,
       "rating": "3.9",
       "reviews": "100 Reviews",
-      "category": "Wellness",
-      "tag": "Sanitizers",
-      "brand": "Revlon"
+      "category": "Delivery287",
+      "tag": "Delivery287"
     },
     {
       "id": 156,
@@ -1849,8 +1696,7 @@
       "rating": "3.8",
       "reviews": "100 Reviews",
       "category": "Beauty & Health",
-      "tag": "Sanitizers",
-      "brand": "Revlon"
+      "tag": "Sanitizers"
     },
     {
       "id": 157,
@@ -1861,8 +1707,7 @@
       "rating": "4",
       "reviews": "100 Reviews",
       "category": "beauty&health",
-      "tag": "Sanitizers",
-      "brand": "Revlon"
+      "tag": "Delivery287"
     },
     {
       "id": 158,
@@ -1872,8 +1717,7 @@
       "rating": "4.0",
       "reviews": "100 Reviews",
       "category": "Beauty & Health",
-      "tag": "Sanitizers",
-      "brand": "Revlon"
+      "tag": "Sanitizers"
     }
   ],
   "homepage": [
@@ -2137,8 +1981,8 @@
       "price": 750,
       "rating": "4.4",
       "reviews": "192 Reviews",
-      "category": "Wellness",
-      "tag": "Sanitizers"
+      "category": "Delivery287",
+      "tag": "Delivery287"
     },
     {
       "id": 153,
@@ -2170,8 +2014,8 @@
       "price": 715,
       "rating": "3.9",
       "reviews": "100 Reviews",
-      "category": "Wellness",
-      "tag": "Sanitizers"
+      "category": "Delivery287",
+      "tag": "Delivery287"
     },
     {
       "id": 156,
@@ -2192,8 +2036,8 @@
       "price": 614,
       "rating": "3.5",
       "reviews": "100 Reviews",
-      "category": "Wellness",
-      "tag": "Sanitizers"
+      "category": "Delivery287",
+      "tag": "Delivery287"
     },
     {
       "id": 158,
@@ -2207,522 +2051,647 @@
       "tag": "Sanitizers"
     }
   ],
+ 
   "ProductTitle": [
-    {
-      "name": "Lycra Drawstring and Elastic Saree Shapewear"
-    },
-    {
-      "name": "Adrika Cotton Sarees"
-    },
-    {
-      "name": "Fab Women Art Silk Sarees"
-    },
-    {
-      "name": "Polyester Slip-on/ Elastic Saree Shapewear"
-    },
-    {
-      "name": "Aakarsha Sensational Kurtis"
-    },
-    {
-      "name": "Banarasi Silk Jacquard Saree With Blouse"
-    },
-    {},
-    {
-      "name": "Alluring Fancy Women Dupattas"
-    },
-    {},
-    {
-      "name": "Georgette Lace border Saree with blouse"
-    },
-    {
-      "name": "Lycra Daily Lace inserts Bollywood Stitched Blouse"
-    },
-    {
-      "name": "Comfy Women Petticoats"
-    },
-    {
-      "name": "Chitrarekha Refined Kurtis"
-    },
-    {
-      "name": "Leheriya Georgette NA saree With blouse",
-      "id": 3
-    },
-    {
-      "name": "Sana Fabulous Women's Patiala Pants Combo Vol 8 With"
-    },
-    {
-      "name": "Aakarsha Banarasi Silk Sarees"
-    },
-    {
-      "name": "Banita Fabulous Kurtis"
-    },
-    {
-      "name": "Stylus Women Petticoats"
-    },
-    {
-      "name": "Abhisarika Fabulous Kurtis"
-    },
-    {
-      "name": "Net Sarees"
-    },
-    {
-      "name": "Women's Slim Fit Saree Shapewears"
-    },
-    {
-      "name": "Adrika Refined Kurtis"
-    },
-    {
-      "name": "Georgette Mirror Work Saree With Blouse"
-    },
-    {
-      "name": "Polyester Slip-on/ Elastic Saree Shapewear"
-    },
-    {
-      "name": "GANESH ETP satin silk Sarees"
-    },
-    {
-      "name": "Aagyeyi Refined Kurtis"
-    },
-    {
-      "name": "Sassy Women Petticoats"
-    },
-    {
-      "name": "Alisha Net Sarees"
-    },
-    {
-      "name": "Aagam Voguish Kurtis"
-    },
-    {
-      "name": "Women pink Saree"
-    },
-    {
-      "name": "Ikkat Georgette saree"
-    },
-    {
-      "name": "Jivika Petite Kurtis"
-    },
-    {
-      "name": "Poly Blend Drawstring and Elastic Saree Shapewear"
-    },
-    {
-      "name": "Aakarsha Ensemble Kurtis"
-    },
-    {
-      "name": "Marble Soft Silk Tassels and Latkans Saree"
-    },
-    {
-      "name": "Alluring Stylish Women Dupattas"
-    },
-    {
-      "name": "Aishani Fashionable Kurtis"
-    },
-    {
-      "name": "Georgette Printed Sarees"
-    },
-    {
-      "name": "Aishani Banarasi Silk Sarees"
-    },
-    {
-      "name": "Myra Voguish Kurtis"
-    },
-    {
-      "name": "Banarasi Silk Jacquard saree with blouse"
-    },
-    {
-      "name": "Comfy Women Saree Shapewear & Petticoats"
-    },
-    {
-      "name": "Kashvi Chiffon Sarees"
-    },
-    {
-      "name": "Classy Fashionable Women Saree"
-    },
-    {
-      "name": "Aakarsha Refined Kurtis"
-    },
-    {
-      "name": "Adrika Fabulous Kurtis"
-    },
-    {
-      "name": "Banita Petite Sarees"
-    },
-    {
-      "name": "Aakarsha Voguish Kurtis"
-    },
-    {
-      "name": "Banita Cotton Sarees"
-    },
-    {
-      "name": "Adrika Refined Kurtis"
-    },
-    {
-      "name": "LD Zone Chanderi Cotton Sarees"
-    },
-    {
-      "name": "Trendy Graceful Sarees"
-    },
-    {
-      "name": "Ravishing Fashionable Women Dupattas"
-    },
-    {
-      "name": "Myra Pretty Kurtis"
-    },
-    {
-      "name": "Aagyeyi Alluring Salwar Suits & Dress Materials"
-    },
-    {
-      "name": "Alluring Stylish Women Dupattas"
-    },
-    {
-      "name": "Aishani Ensemble Kurtis"
-    },
-    {
-      "name": "Alisha Refined Kurtis"
-    },
-    {
-      "name": "Stylus Women Petticoats"
-    },
-    {
-      "name": "Urbane Retro Men Tshirts"
-    },
-    {
-      "name": "Vellical Men Shirts"
-    },
-    {
-      "name": "Stylish Designer Men Shirts"
-    },
-    {
-      "name": "Comfy Elegant Men Shirts"
-    },
-    {
-      "name": "Stylish Fabulous Men Tshirts"
-    },
-    {
-      "name": "Manlino Men Tshirts"
-    },
-    {
-      "name": "Stylish Retro Men Tshirts"
-    },
-    {
-      "name": "Stylish Elegant Men Tshirts"
-    },
-    {
-      "name": "Urbane Elegant Men Shirts"
-    },
-    {
-      "name": "Fancy Elegant Men Shirts"
-    },
-    {
-      "name": "Designer Fabulous Men Jeans"
-    },
-    {
-      "name": "Hill Turner Men Jeans"
-    },
-    {
-      "name": "Fancy Fabulous Men Jeans"
-    },
-    {
-      "name": "Elegant Fabulous Men Jeans"
-    },
-    {
-      "name": "Gorgeous Unique Men Jeans"
-    },
-    {
-      "name": "Designer Modern Men Jeans"
-    },
-    {
-      "name": "Elegant Fashionista Men Jeans"
-    },
-    {
-      "name": "Casual Modern Men Jeans"
-    },
-    {
-      "name": "Ravishing Latest Men Jeans"
-    },
-    {
-      "name": "Designer Latest Men Jeans"
-    },
-    {
-      "name": "Fashionable Watches"
-    },
-    {
-      "name": "Modern Men Watches"
-    },
-    {
-      "name": "Classy Men Watches"
-    },
-    {
-      "name": "Essential Watches"
-    },
-    {
-      "name": "Fashionate Watches"
-    },
-    {
-      "name": "Ravishing Men Watches"
-    },
-    {
-      "name": "Stylish Men Watches"
-    },
-    {
-      "name": "Stylish Men Watches"
-    },
-    {
-      "name": "Classy Men Watches"
-    },
-    {
-      "name": "Attractive Men Watches"
-    },
-    {
-      "name": "Latest Attractive Men Formal Shoes"
-    },
-    {
-      "name": "Relaxed Trendy Men Formal Shoes"
-    },
-    {
-      "name": "Latest Fashionable Men Formal Shoes"
-    },
-    {
-      "name": "Aadab Fashionable Men Formal Shoes"
-    },
-    {
-      "name": "Unique Trendy Men Formal Shoes"
-    },
-    {
-      "name": "Aadab Fashionable Men Formal Shoes"
-    },
-    {
-      "name": "Latest Trendy Men Formal Shoes"
-    },
-    {
-      "name": "Relaxed Trendy Men Formal Shoes"
-    },
-    {
-      "name": "Aadab Fashionable Men Formal Shoes"
-    },
-    {
-      "name": "Relaxed Graceful Men Formal Shoes"
-    },
-    {
-      "name": "Classic Men Kurta Sets"
-    },
-    {
-      "name": "Designer Men Kurtas"
-    },
-    {
-      "name": "Ethnic Men Kurtas"
-    },
-    {
-      "name": "Elegant Men Kurta Sets"
-    },
-    {
-      "name": "Trendy Men Kurtas"
-    },
-    {
-      "name": "Comfy Men Kurtas"
-    },
-    {
-      "name": "Classic Men Kurtas"
-    },
-    {
-      "name": "Comfy Men Kurtas"
-    },
-    {
-      "name": "Comfy Men Kurtas"
-    },
-    {
-      "name": "Modern Men Kurta Sets"
-    },
-    {
-      "name": "Unique Face Makeup Combo"
-    },
-    {
-      "name": "Useful Face Makeup Combo"
-    },
-    {
-      "name": "Premium Extreme Face Makeup Combo"
-    },
-    {
-      "name": "Unique Face Makeup Combo"
-    },
-    {
-      "name": "Classy Face Makeup Combo"
-    },
-    {
-      "name": "New Collections Of Face Makeup Combo"
-    },
-    {
-      "name": "Face Makeup Combo"
-    },
-    {
-      "name": "Unique Face Makeup Combo"
-    },
-    {
-      "name": "New Face Makeup Combo"
-    },
-    {
-      "name": "Everyday Face Makeup Combo"
-    },
-    {
-      "name": "Essential Oral Care"
-    },
-    {
-      "name": "UrbanMooch Natural Activated Charcoal Teeth Whitening Powder"
-    },
-    {
-      "name": "Dentacleen Tooth Paste With Mouthwash"
-    },
-    {
-      "name": "Oral Care Kits"
-    },
-    {
-      "name": "New Oral care"
-    },
-    {
-      "name": "AKilli Teeth Whitening Charcoal Activated Carbon Powder Vol 1"
-    },
-    {
-      "name": "Stylish Healthy Oral Care Products Vol 1"
-    },
-    {
-      "name": "Premium Dental Floss Sticks Vol 7"
-    },
-    {
-      "name": "Eva Premium Babool Toothpowder Vol 11"
-    },
-    {
-      "name": "Babool Ayurveda Tooth Powder"
-    },
-    {
-      "name": "Sensational Attractive Nail Polish"
-    },
-    {
-      "name": "Sensational Long Lasting Nail Polish"
-    },
-    {
-      "name": "Stylo Nail Paint"
-    },
-    {
-      "name": "Long Lasting Nail Paint (Glossy Color: Multiple Color),Set of 12"
-    },
-    {
-      "name": "Proffesional HD Color Nail Polish"
-    },
-    {
-      "name": "Sensational HD Color Nail Polish"
-    },
-    {
-      "name": "Superior True Color Nail Polish"
-    },
-    {
-      "name": "Proffesional Bright Nail Polish"
-    },
-    {
-      "name": "Superior Long Lasting Nail Polish"
-    },
-    {
-      "name": "Fancy Eye Makeup Combo"
-    },
-    {
-      "name": "Everyday Eye Makeup Combo"
-    },
-    {
-      "name": "Classy Eye Makeup Combo"
-    },
-    {
-      "name": "New Eye Makeup Combo"
-    },
-    {
-      "name": "Useful Eye Makeup Combo"
-    },
-    {
-      "name": "Unique Eye Makeup Combo"
-    },
-    {
-      "name": "New Collections Of Eye Makeup Combo"
-    },
-    {
-      "name": "New Collections Of Eye Makeup Combo"
-    },
-    {
-      "name": "Unique Eye Makeup Combo"
-    },
-    {
-      "name": "Latest ADS Eyebrow Eye makeup Combo"
-    },
-    {
-      "name": "Classic Sanitizers/Disinfectant"
-    },
-    {
-      "name": "Classic Sanitizers/Disinfectant"
-    },
-    {
-      "name": "Sanitizer"
-    },
-    {
-      "name": "Classy Sanitizers/Disinfectant"
-    },
-    {
-      "name": "New Sanitizers/Disinfectant"
-    },
-    {
-      "name": "Everyday Sanitizers/Disinfectant"
-    },
-    {
-      "name": "Everyday Sanitizers/Disinfectant"
-    },
-    {
-      "name": "Classic Sanitizers/Disinfectant"
-    },
-    {
-      "name": "Classic Sanitizers/Disinfectant"
-    },
-    {
-      "name": "New Sanitizers/Disinfectant"
-    },
-    {
-      "name": "Men t shirt"
-    },
-    {
-      "name": "Masai Kurtas"
-    }
-  ],
-  "cartdata": [
-    {
-      "id": 158,
-      "title": "New Sanitizers/Disinfectant",
-      "image": "https://images.meesho.com/images/products/101090606/jecdu_400.webp",
-      "price": 121,
-      "rating": "4.0",
-      "reviews": "100 Reviews",
-      "category": "Beauty & Health",
-      "tag": "Sanitizers",
-      "brand": "Revlon"
-    },
-    {
-      "id": 2,
-      "title": "Adrika Cotton Sarees",
-      "image": "https://images.meesho.com/images/products/32768758/y5lju_400.webp",
-      "image2": "https://images.meesho.com/images/products/32768758/y5lju_400.webp",
-      "price": 223,
-      "rating": "3.7",
-      "reviews": "27596 Reviews",
-      "category": "women",
-      "brand": "levis",
-      "tag": "saree"
-    }
-  ],
-  "wishlist" :[
-    {
-      "id": 2,
-      "title": "Adrika Cotton Sarees",
-      "image": "https://images.meesho.com/images/products/32768758/y5lju_400.webp",
-      "image2": "https://images.meesho.com/images/products/32768758/y5lju_400.webp",
-      "price": 223,
-      "rating": "3.7",
-      "reviews": "27596 Reviews",
-      "category": "women",
-      "brand": "levis",
-      "tag": "saree"
-    }
+    
+   
+        {
+
+         "name": "Lycra Drawstring and Elastic Saree Shapewear"
+        },
+        {
+
+         "name": "Adrika Cotton Sarees"
+        },
+       {
+
+        "name": "Fab Women Art Silk Sarees"
+       },
+       {
+
+        "name": "Polyester Slip-on/ Elastic Saree Shapewear"
+       },
+       
+       {
+        "name": "Aakarsha Sensational Kurtis"
+
+      },
+      {
+
+        "name": "Banarasi Silk Jacquard Saree With Blouse"
+      },
+      {
+
+      },
+      { "name":      
+        "Alluring Fancy Women Dupattas"},
+      {
+
+      },
+      {"name":
+        
+        "Georgette Lace border Saree with blouse"},
+      {
+
+      "name":  "Lycra Daily Lace inserts Bollywood Stitched Blouse"
+      } ,
+       {
+
+       "name":  "Comfy Women Petticoats"
+       },
+       {
+
+       "name":  "Chitrarekha Refined Kurtis"
+       },
+       {
+
+       "name":  "Leheriya Georgette NA saree With blouse",
+       "id":3
+       },
+       {
+
+       "name":  "Sana Fabulous Women's Patiala Pants Combo Vol 8 With"
+       },
+       {
+
+       "name":  "Aakarsha Banarasi Silk Sarees"
+       },
+       {
+
+       "name":  "Banita Fabulous Kurtis"
+       } ,
+       {
+
+       "name":  "Stylus Women Petticoats"
+       },
+       {
+
+       "name":  "Abhisarika Fabulous Kurtis"
+       },
+       {
+
+       "name":  "Net Sarees"
+       },
+       {
+
+       "name":  "Women's Slim Fit Saree Shapewears"
+       },
+       {
+
+       "name":  "Adrika Refined Kurtis"
+       },
+       {
+
+       "name":  "Georgette Mirror Work Saree With Blouse"
+       },
+       {
+
+       "name":  "Polyester Slip-on/ Elastic Saree Shapewear"
+       },
+       {
+
+       "name":  "GANESH ETP satin silk Sarees"
+       },
+       {
+
+       "name":  "Aagyeyi Refined Kurtis"
+       },
+       {
+
+       "name":  "Sassy Women Petticoats"
+       },
+       {
+
+       "name":  "Alisha Net Sarees"
+       },
+       {
+
+       "name":  "Aagam Voguish Kurtis"
+       },
+       {
+
+       "name":  "Women pink Saree"
+       },
+       {
+
+       "name":  "Ikkat Georgette saree"
+       },
+       {
+
+       "name":  "Jivika Petite Kurtis"
+       },
+       {
+
+       "name":  "Poly Blend Drawstring and Elastic Saree Shapewear"
+       },
+       {
+
+       "name":  "Aakarsha Ensemble Kurtis"
+       },
+       {
+
+       "name":  "Marble Soft Silk Tassels and Latkans Saree"
+       },
+       {
+
+       "name":  "Alluring Stylish Women Dupattas"
+       },
+       {
+
+       "name":  "Aishani Fashionable Kurtis"
+       },
+       {
+
+       "name":  "Georgette Printed Sarees"
+       } ,
+        {
+
+          "name":"Aishani Banarasi Silk Sarees"
+        },
+       {
+
+       "name":  "Myra Voguish Kurtis"
+       },
+       {
+
+       "name":  "Banarasi Silk Jacquard saree with blouse"
+       },
+       {
+
+       "name":  "Comfy Women Saree Shapewear & Petticoats"
+       },
+       {
+
+       "name":  "Kashvi Chiffon Sarees"
+       },
+       {
+
+       "name":  "Classy Fashionable Women Saree"
+       },
+       {
+
+       "name":  "Aakarsha Refined Kurtis"
+       },
+       {
+
+       "name":  "Adrika Fabulous Kurtis"
+       },
+       {
+
+       "name":  "Banita Petite Sarees"
+       },
+       {
+
+       "name":  "Aakarsha Voguish Kurtis"
+       },
+       {
+
+       "name":  "Banita Cotton Sarees"
+       },
+       {
+
+       "name":  "Adrika Refined Kurtis"
+       },
+       {
+
+       "name":  "LD Zone Chanderi Cotton Sarees"
+       },
+       {
+
+       "name":  "Trendy Graceful Sarees"
+       },
+       {
+
+       "name":  "Ravishing Fashionable Women Dupattas"
+       },
+       {
+
+       "name":  "Myra Pretty Kurtis"
+       },
+       {
+
+       "name":  "Aagyeyi Alluring Salwar Suits & Dress Materials"
+       },
+       {
+
+       "name":  "Alluring Stylish Women Dupattas"
+       },
+       {
+
+       "name":  "Aishani Ensemble Kurtis"
+       },
+       {
+
+       "name":  "Alisha Refined Kurtis"
+       },
+       {
+
+       "name":  "Stylus Women Petticoats"
+       },
+       {
+
+       "name":  "Urbane Retro Men Tshirts"
+       },
+       {
+
+       "name":  "Vellical Men Shirts"
+       },
+       {
+
+       "name":  "Stylish Designer Men Shirts"
+       },
+       {
+
+       "name":  "Comfy Elegant Men Shirts"
+       },
+       {
+
+       "name":  "Stylish Fabulous Men Tshirts"
+       },
+       {
+
+       "name":  "Manlino Men Tshirts"
+       },
+       {
+
+       "name":  "Stylish Retro Men Tshirts"
+       },
+       {
+
+       "name":  "Stylish Elegant Men Tshirts"
+       },
+       {
+
+       "name":  "Urbane Elegant Men Shirts"
+       },
+       {
+
+       "name":  "Fancy Elegant Men Shirts"
+       },
+       {
+
+       "name":  "Designer Fabulous Men Jeans"
+       },
+       {
+
+       "name":  "Hill Turner Men Jeans"
+       },
+       {
+
+       "name":  "Fancy Fabulous Men Jeans"
+       },
+       {
+
+       "name":  "Elegant Fabulous Men Jeans"
+       },
+       {
+
+       "name":  "Gorgeous Unique Men Jeans"
+       },
+       {
+
+       "name":  "Designer Modern Men Jeans"
+       },
+       {
+
+       "name":  "Elegant Fashionista Men Jeans"
+       },
+       {
+
+       "name":  "Casual Modern Men Jeans"
+       },
+       {
+
+       "name":  "Ravishing Latest Men Jeans"
+       },
+       {
+
+       "name":  "Designer Latest Men Jeans"
+       },
+       {
+
+       "name":  "Fashionable Watches"
+       },
+       {
+
+       "name":  "Modern Men Watches"
+       },
+       {
+
+       "name":  "Classy Men Watches"
+       },
+       {
+
+       "name":  "Essential Watches"
+       },
+       {
+
+       "name":  "Fashionate Watches"
+       },
+       {
+
+       "name":  "Ravishing Men Watches"
+       },
+       {
+
+       "name":  "Stylish Men Watches"
+       },
+       {
+
+       "name":  "Stylish Men Watches"
+       },
+       {
+
+       "name":  "Classy Men Watches"
+       },
+       {
+
+       "name":  "Attractive Men Watches"
+       },
+       {
+
+       "name":  "Latest Attractive Men Formal Shoes"
+       },
+       {
+
+       "name":  "Relaxed Trendy Men Formal Shoes"
+       },
+       {
+
+       "name":  "Latest Fashionable Men Formal Shoes"
+       },
+       {
+
+       "name":  "Aadab Fashionable Men Formal Shoes"
+       },
+       {
+
+       "name":  "Unique Trendy Men Formal Shoes"
+       },
+       {
+
+       "name":  "Aadab Fashionable Men Formal Shoes"
+       },
+       {
+
+       "name":  "Latest Trendy Men Formal Shoes"
+       },
+       {
+
+       "name":  "Relaxed Trendy Men Formal Shoes"
+       },
+       {
+
+       "name":  "Aadab Fashionable Men Formal Shoes"
+       },
+       {
+
+       "name":  "Relaxed Graceful Men Formal Shoes"
+       },
+       {
+
+       "name":  "Classic Men Kurta Sets"
+       },
+       {
+
+       "name":  "Designer Men Kurtas"
+       },
+       {
+
+       "name":  "Ethnic Men Kurtas"
+       },
+       {
+
+       "name":  "Elegant Men Kurta Sets"
+       },
+       {
+
+       "name":  "Trendy Men Kurtas"
+       },
+       {
+
+       "name":  "Comfy Men Kurtas"
+       },
+       {
+
+       "name":  "Classic Men Kurtas"
+       },
+       {
+
+       "name":  "Comfy Men Kurtas"
+       },
+      {
+
+      "name":  "Comfy Men Kurtas"
+      },
+      {
+
+      "name":  "Modern Men Kurta Sets"
+      } ,
+       {
+
+       "name":  "Unique Face Makeup Combo"
+       },
+       {
+
+       "name":  "Useful Face Makeup Combo"
+       },
+       {
+
+       "name":  "Premium Extreme Face Makeup Combo"
+       },
+       {
+
+       "name":  "Unique Face Makeup Combo"
+       },
+       {
+
+       "name":  "Classy Face Makeup Combo"
+       },
+      {
+
+      "name":  "New Collections Of Face Makeup Combo"
+      },
+      {
+
+      "name":  "Face Makeup Combo"
+      } ,
+       {
+
+       "name":  "Unique Face Makeup Combo"
+       },
+       {
+
+       "name":  "New Face Makeup Combo"
+       },
+       {
+
+       "name":  "Everyday Face Makeup Combo"
+       },
+       {
+
+       "name":  "Essential Oral Care"
+       },
+       {
+
+       "name":  "UrbanMooch Natural Activated Charcoal Teeth Whitening Powder"
+       },
+       {
+
+       "name":  "Dentacleen Tooth Paste With Mouthwash"
+       },
+       {
+
+       "name":  "Oral Care Kits"
+       },
+       {
+
+       "name":  "New Oral care"
+       },
+       {
+
+       "name":  "AKilli Teeth Whitening Charcoal Activated Carbon Powder Vol 1"
+       },
+       {
+
+       "name":  "Stylish Healthy Oral Care Products Vol 1"
+       },
+       {
+
+       "name":  "Premium Dental Floss Sticks Vol 7"
+       },
+       {
+
+       "name":  "Eva Premium Babool Toothpowder Vol 11"
+       },
+       {
+
+       "name":  "Babool Ayurveda Tooth Powder"
+       },
+       {
+
+       "name":  "Sensational Attractive Nail Polish"
+       },
+       {
+
+       "name":  "Sensational Long Lasting Nail Polish"
+       },
+       {
+
+       "name":  "Stylo Nail Paint"
+       },
+       {
+
+       "name":  "Long Lasting Nail Paint (Glossy Color: Multiple Color),Set of 12"
+       },
+       {
+
+       "name":  "Proffesional HD Color Nail Polish"
+       },
+       {
+
+       "name":  "Sensational HD Color Nail Polish"
+       } ,
+        {
+
+          "name":"Superior True Color Nail Polish"
+        },
+       {
+
+       "name":  "Proffesional Bright Nail Polish"
+       },
+       {
+
+       "name":  "Superior Long Lasting Nail Polish"
+       },
+       {
+
+       "name":  "Fancy Eye Makeup Combo"
+       },
+       {
+
+       "name":  "Everyday Eye Makeup Combo"
+       },
+       {
+
+       "name":  "Classy Eye Makeup Combo"
+       },
+       {
+
+       "name":  "New Eye Makeup Combo"
+       },
+       {
+
+       "name":  "Useful Eye Makeup Combo"
+       },
+       {
+
+       "name":  "Unique Eye Makeup Combo"
+       },
+       {
+
+       "name":  "New Collections Of Eye Makeup Combo"
+       },
+       {
+
+       "name":  "New Collections Of Eye Makeup Combo"
+       },
+       {
+
+       "name":  "Unique Eye Makeup Combo"
+       },
+       {
+
+       "name":  "Latest ADS Eyebrow Eye makeup Combo"
+       },
+       {
+
+       "name":  "Classic Sanitizers/Disinfectant"
+       },
+       {
+
+       "name":  "Classic Sanitizers/Disinfectant"
+       },
+       {
+
+       "name":  "Sanitizer"
+       },
+       {
+
+       "name":  "Classy Sanitizers/Disinfectant"
+       },
+       {
+
+       "name":  "New Sanitizers/Disinfectant"
+       },
+       {
+
+       "name":  "Everyday Sanitizers/Disinfectant"
+       },
+       {
+
+       "name":  "Everyday Sanitizers/Disinfectant"
+       },
+       {
+
+       "name":  "Classic Sanitizers/Disinfectant"
+       },
+       {
+
+       "name":  "Classic Sanitizers/Disinfectant"
+       },
+       {
+
+       "name":  "New Sanitizers/Disinfectant"
+       },
+       {
+
+       "name":  "Men t shirt"
+       },
+       {
+
+       "name":  "Masai Kurtas"
+       }
+      
   ]
 }
