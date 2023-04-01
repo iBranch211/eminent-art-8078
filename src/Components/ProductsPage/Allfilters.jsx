@@ -16,9 +16,8 @@ import {
 import { Spinner } from "@chakra-ui/spinner";
 import { Button } from "@chakra-ui/button";
 import { getProducts } from "../../Redux/ProductReducer/action";
-import { memo } from "react";
 
-const Allfilters = ({filterHeading, handleGoBack }) => {
+const Allfilters = ({filterHeading, price, handleGoBack }) => {
     const [searchParams,setSearchParams]=useSearchParams()
     let dispatch = useDispatch();
     const navigate = useNavigate();
@@ -32,6 +31,14 @@ const [category,setcategory]=useState('')
   const initialsortdata =searchParams.get('sortingByPrice')
    
    const[sortingByPrice,setSortingByPrice]=useState(initialsortdata || '' )
+
+   const HandleFilterHeading = (category) => {
+  //   params.category = category;
+  //   const path = `${location.pathname}/${category}`;
+  //   navigate(path);
+  //   setcategory([category]);
+  //  dispatch(getProducts(params));
+  };
 
   useEffect(()=>{
     let params={}
@@ -98,7 +105,14 @@ const handlesort=(e)=>{
                           <Box  as="span" flex="1" textAlign="left">
                             <Flex>
                                 
-                            
+                              <Text
+                                _hover={{ color: "#0076be", fontWeight: "black" }}
+                                cursor={"pointer"}
+                                fontWeight={"bold"}
+                                onClick={() => {
+                                  HandleFilterHeading();
+                                 }}>
+                              </Text>
                               <AccordionPanel >
                                 <Box p={1} > 
                                 <Checkbox  _hover={{ color: "#24a3b5", fontWeight: "bold" }} isChecked={sortrange.includes("100-699")} name='sortrange' onChange={handlesort}  my={2}value='100-699' >100-699</Checkbox>
@@ -148,7 +162,14 @@ const handlesort=(e)=>{
                           <Box  as="span" flex="1" textAlign="left">
                             <Flex>
                                 
-                      
+                              <Text
+                                _hover={{ color: "#0076be", fontWeight: "black" }}
+                                cursor={"pointer"}
+                                fontWeight={"bold"}
+                                onClick={() => {
+                                  HandleFilterHeading();
+                                 }}>
+                              </Text>
                               <AccordionPanel pb={4}>
                                 <Box p={1} > 
                                 <Checkbox isChecked={categorytag.includes("saree")} name='categorytag' onChange={handlechange}  my={2} value='saree' >Saree</Checkbox>
@@ -190,5 +211,5 @@ const handlesort=(e)=>{
  </VStack>      )        }
                          
 
-export default memo(Allfilters)
+export default Allfilters
 

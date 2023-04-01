@@ -1,12 +1,19 @@
 import "./App.css";
-import { Home } from "./Pages/Home";
-import { Wishlist } from "./Pages/Wishlist";
+
+import Homepage from "./Pages/Homepage";
+import Navigationbar from "./Components/HomePage/Navigationbar";
+
+
 import AllRoutes from "./Routes/AllRoutes";
+import Banner from "./Components/HomePage/Banner";
+import { Product } from "./Pages/Product";
+
 
 function App() {
   return (
     <div className="App">
-    <AllRoutes/>
+      {/* <Product /> */}
+      <AllRoutes/>
     </div>
   );
 }
