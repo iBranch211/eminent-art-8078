@@ -4,66 +4,74 @@ import{TbNotes} from "react-icons/tb"
 import {HiOutlineCurrencyRupee} from "react-icons/hi"
 import {AiOutlineStar} from "react-icons/ai"
 import {AiOutlineHeart} from "react-icons/ai"
-import{BsCursor, BsHouseGear} from "react-icons/bs"
+import{BsHouseGear} from "react-icons/bs"
 import{BsHeadset} from "react-icons/bs"
 export default function LeftDiv(){
-    return<Box width={"30%"} boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;"} fontSize={{ base: 'sm', md: 'md', lg: 'md',xl:"md","2xl":"md" }}  >
+    return<Box width={"30%"} boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;"} >
 
-         <Stack p = '3%'>
+         <Stack p = '20px'>
 
               <HStack mb = '20px' w={"100%"} justifyContent="space-around">
                   <Text color = 'teal'>My Account</Text>
-                  <Button ml = '20%'  bg = 'orange.400' color = 'white' size={['2xs', 'sm', 'md', 'md']} fontSize={["xs", 'sm', 'md', 'md',"md"]}>Join VIP Club</Button>
+                  <Button ml = '20%'  bg = 'orange.600' color = 'white'fontSize={""}>Join VIP Club</Button>
               </HStack>
 
-              <HStack pl={"7%"}>
-                  <TbNotes  size = '25px' />
-                  <Text pl="15%">My Orders</Text>
+              <HStack>
+                  <TbNotes  size = '25px'/>
+                  <Text ml = '20px'>My Orders</Text>
               </HStack>
 
               <HStack justifyContent="space-around">
               <HiOutlineCurrencyRupee size={"25px"}/>
                   <Text ml = '20px'>My Clues Bucks</Text>
-                  <Button color={"white"} bg={"teal.400"} size={['2xs', 'sm', 'md', 'md']} fontSize={["xs", 'sm', 'md', 'md',"md"]}>0</Button>
+                  <Button color={"white"} bg={"teal.400"}>0</Button>
               </HStack>
 
               <HStack justifyContent="space-around">
               
                   <HiOutlineCurrencyRupee size={"25px"}/>
                   <Text ml = '20px'>My Clues Bucks+</Text>
-                  <Button color={"white"} bg={"teal.400"} size={['2xs', 'sm', 'md', 'md']} fontSize={["xs", 'sm', 'md', 'md',"md"]}>0</Button>
+                  <Button color={"white"} bg={"teal.400"}>0</Button>
               </HStack>
 
 
-              <HStack pl="7%">
+              <HStack>
                   <RxAvatar size = '25px'/>
-                  <Text pl="15%">My Profile</Text>
+                  <Text>My Profile</Text>
               </HStack>
 
-              <HStack pl="7%">
+              <HStack>
                   <AiOutlineStar size = '25px'/>
-                  <Text pl="15%">Rate Your Purchase</Text>
+                  <Text>Rate Your Purchase</Text>
               </HStack>
               
 
               <HStack justifyContent="space-around">
                  <AiOutlineHeart size = '25px'/>
                   <Text>MY Wishlist</Text>
-                  <Button color={"white"} bg={"teal.400"} size={['2xs', 'sm', 'md', 'md']} fontSize={["2xs", 'sm', 'md', 'md',"md"]}>0</Button>
+                  <Button color={"white"} bg={"teal.400"}>0</Button>
               </HStack>
 
 
-              <HStack pl="7%">
+              <HStack>
                   <BsHouseGear size = '25px'/>
-                  <Text pl="15%">My Favorite Stories</Text>
+                  <Text>My Favorite Stories</Text>
               </HStack>
 
 
-              <HStack pl="7%">
+              <HStack>
                   <BsHeadset size = '25px'/>
-                  <Text pl="15%">Help & Support</Text>
+                  <Text>Help & Support</Text>
               </HStack>
          </Stack>
        
+         {/* <h2></h2> 
+         <h2> </h2>
+        <h2></h2>
+         <h2></h2>
+         <h2> </></h2>
+        <h2> </></h2> */}
+        
+
     </Box>
 }

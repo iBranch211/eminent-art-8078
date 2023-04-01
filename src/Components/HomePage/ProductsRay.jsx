@@ -2,7 +2,7 @@ import { Box, Heading, Center, Flex, Grid, GridItem, SimpleGrid } from '@chakra-
 import React from 'react'
 import ProductCard from './ProductCard'
 
-const objectofdealsoftheday = [
+export const objectofdealsoftheday = [
   {
     image: 'https://cdn.shopclues.com/images1/thumbnails/99370/200/200/145508146-99370521-1668508420.jpg',
     brand: 'i7S TWS Twins Wireless Ins',
@@ -47,7 +47,7 @@ const objectofdealsoftheday = [
 
 ]
 
-const objectofyourgadgetsstore = [
+export const objectofyourgadgetsstore = [
   {
     image: 'https://cdn.shopclues.com/images1/thumbnails/116805/200/200/153268880-116805429-1671089587.jpg',
     brand: 'AXL AHP-02-RED Wired Headphone',
