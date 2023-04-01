@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-// import "./LoginPage.module.css";
 import "./LoginPage.css";
-import { useNavigate } from "react-router-dom";
 import { app } from "../firebase/firebase";
 import {
   getAuth,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
-import Navigationbar from "../Components/HomePage/Navigationbar";
-import { Footer } from "./HomeComponents/Footer";
 
 const LoginPage = () => {
   // Login Firebase Config
-  const navigate = useNavigate();
+
   const auth = getAuth(app);
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
@@ -24,16 +20,12 @@ const LoginPage = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        console.log(user.accessToken);
-        if (user.accessToken) {
-          navigate("/");
-        }
+        console.log(user);
         // ...
       })
       .catch((error) => {
-        // const errorCode = error.code;
-        // const errorMessage = error.message;
-        window.alert("Plz Enter Valid Data")
+        const errorCode = error.code;
+        const errorMessage = error.message;
       });
   };
 
@@ -51,10 +43,8 @@ const LoginPage = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        console.log(user.accessToken);
-        if (user.accessToken) {
-          setMode("sign-in");
-        }
+        console.log(user);
+        // ...
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -78,8 +68,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <Navigationbar />
-      <div className={`containers ${mode === "sign-up" ? "sign-up-mode" : ""}`}>
+      <div className={`container-login ${mode === "sign-up" ? "sign-up-mode" : ""}`}>
         <div class="forms-container">
           <div class="signin-signup">
             <form action="" class="sign-in-form" onSubmit={handlesubmit}>
@@ -204,7 +193,6 @@ const LoginPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
