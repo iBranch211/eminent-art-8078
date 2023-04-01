@@ -54,10 +54,10 @@ const Navigationbar = () => {
   )
 }
 
-const LineNavCompo = ({ name}) => {
+const LineNavCompo = ({ name, key }) => {
 
   return (
-    <Center cursor='pointer' textAlign='center' w='180px' fontSize='13px' h='1cm' href='#' _hover={{ color: '#24a3b5' }}>
+    <Center cursor='pointer' textAlign='center' w='180px' fontSize='13px' h='1cm' key={key} href='#' _hover={{ color: '#24a3b5' }}>
       {name}
     </Center>
   )

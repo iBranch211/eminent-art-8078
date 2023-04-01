@@ -2,7 +2,6 @@ import React from "react";
 import { Flex, Button, Text, IconButton } from "@chakra-ui/react";
 import { RxDoubleArrowLeft, RxDoubleArrowRight } from "react-icons/rx";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { memo } from "react";
 
 let BTN_COUNT = 5;
 
@@ -69,4 +68,4 @@ const Pagination = ({ current, total, handlePageChange }) => {
   );
 };
 
-export default memo(Pagination);
+export default Pagination;
