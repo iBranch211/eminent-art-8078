@@ -1,11 +1,10 @@
 ### Project-Code: eminent-art-8078
-<a href="https://velvety-churros-bb0ba8.netlify.app/" >Deployed Link</a>
+
 # TRENDIFY
 
 <p> RESPONSIVE  |  DYNAMIC | COLLABORATIVE </p>
 
 <br>
-
 
 <div display='flex'>
 <img src='https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E' />
@@ -64,9 +63,7 @@ An e-commerce website for clothing, health & care products. A Collaborative proj
 
 <img  src='./src/Assests/singlecartpage.png' alt='homepage' />
 <br/>
+<!-- 
+## HomePage-
 
-## Admin Page*
-![adminpage](https://user-images.githubusercontent.com/90616584/229440683-0a088c33-946d-4809-9a46-3e4c1e56bfc1.jpg)
-
-## Admin Products Page*
-![adminproductspage](https://user-images.githubusercontent.com/90616584/229441217-6377a096-321a-469a-96bb-0fdcf941eb6f.jpg)
+<img  src='./src/Assests/homepage.png' alt='homepage' /> -->
