@@ -48,14 +48,14 @@ import Navmain from "../HomePage/Navmain.jsx";
 
 const SingleProductPageMain = () => {
   const [itemInCart, setItemInCart] = useState(false);
-const toast=useToast()
+
   const [product, setProduct] = React.useState({});
 
   const navigate = useNavigate();
   const handleGoBack = () => {
     navigate("/products");
   };
- 
+  const toast = useToast();
   const { id } = useParams();
 
   const dispatch = useDispatch();
@@ -64,14 +64,6 @@ const toast=useToast()
   const handleAddToCart = (e) => {
     // Add logic to add product to cart
     // e.stopPropogation()
-    toast({
-      title: 'Product Added',
-          description: "Product added to Cart.",
-          status: 'success',
-          duration: 2000,
-          isClosable: true,
-          position: 'top',
-    })
     dispatch(addtocart(product));
   };
   const cartItems = getCart();
@@ -96,15 +88,6 @@ const toast=useToast()
 
   const handlebuynow = () => {
     // Add logic to buy products
-    toast({
-      title: 'Redirecting..',
-          description: "Navigating To payment page.",
-          status: 'success',
-          duration: 2000,
-          isClosable: true,
-          position: 'top',
-    })
-
     navigate("/payments");
   };
   
