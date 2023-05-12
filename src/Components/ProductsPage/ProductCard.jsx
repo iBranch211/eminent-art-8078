@@ -12,7 +12,7 @@ import {
   Stack,
   Text,
   useColorModeValue,
-  useToast,Skeleton, SkeletonCircle, SkeletonText 
+  useToast,
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import { FiTruck } from "react-icons/fi";
@@ -29,8 +29,8 @@ import { Addtowishlist } from "../../Redux/ProductReducer/action";
 function ProductCard(props) {
   const { path, category } = useParams();
   const toast=useToast()
-  const { id, image, title, price, rating,discount,_id } = props;
-  let { loading, productsData, wishlistdata,error } = useSelector(
+  const { id, image, title, price, rating } = props;
+  let { loading, productsData, wishlistdata } = useSelector(
     (store) => store.ProductReducer
   );
   const imagezoom = useRef();
@@ -47,7 +47,6 @@ function ProductCard(props) {
 
   const addtowishlist = (ids) => {
     let data = {
-      ...ids,
       brand: ids.brand,
       category: ids.category,
       id: ids.id,
@@ -58,8 +57,6 @@ function ProductCard(props) {
       reviews: ids.reviews,
       tag: ids.tag,
       title: ids.title,
-      _id:ids[_id]
-      
     };
     toast({
       title: 'Product Added',
@@ -77,23 +74,8 @@ function ProductCard(props) {
   const location = useLocation();
 
 
- if(loading){
-  return(
-    <Box padding='6' boxShadow='lg' bg='white' w='150px'>
-  <SkeletonCircle size='10' />
-  <Skeleton
-        p={"5px"}
-        onMouseOver={handleimagezoomin}
-        onMouseLeave={handleimagezoomout}
-        _hover={{ border: "1px solid #24a3b5" }}
-      ></Skeleton>
-  <SkeletonText mt='4' noOfLines={4} spacing='4' skeletonHeight='2' />
-</Box>
 
-  )
- }else if(productsData.products.length<=0 || error==true){
-  return <NotfoundCategory />
-}
+
   return (
     <Card maxW="sm">
       <CardBody
@@ -112,7 +94,7 @@ function ProductCard(props) {
         >
           <Icon size="20px" as={BsFillHeartFill} />
         </Box>
-        <Link to={`/products/${category}/single/${_id}`} >
+        <Link to={`/products/${category}/${id}/single?`}>
           <VStack p="10px">
             <Box h="300px" overflow="hidden">
               <Box
@@ -165,10 +147,10 @@ function ProductCard(props) {
                   Rs.{price + 350}
                 </Text>
                 <Text fontWeight={600} color={"#24a3b5"}>
-                  {discount}% off
+                  {`${Math.floor(Math.random() * 50)}% off`}
                 </Text>
               </HStack>
-              <StarRating rating={rating?rating : 3} />
+              <StarRating rating={rating} />
               <HStack>
                 <Icon as={FiTruck} />
                 <Text>Free Delivery</Text>{" "}
@@ -181,4 +163,4 @@ function ProductCard(props) {
   );
 }
 
-export default ProductCard;
+export default memo(ProductCard);
