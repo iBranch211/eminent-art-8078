@@ -8,7 +8,7 @@ import "./CartPage.css";
 import { Link, NavLink } from "react-router-dom";
 // import data from "../../products";
 import { getCart, removeItemFromCart, addOrderArr } from "./useLocalStorage";
-import Navmain from "../../Components/HomePage/Navmain";
+import Navigationbar from "../../Components/HomePage/Navigationbar";
 
 function CartPage(props) {
   const cartItemst = getCart();
@@ -79,7 +79,7 @@ function CartPage(props) {
   if (cartItems.length === 0) {
     return (
       <>
-        <Navmain/>
+        <Navigationbar />
         <div className="cart-page">
           <h1>No Items In Cart</h1>
           <Modal
@@ -120,7 +120,6 @@ function CartPage(props) {
 
   return (
     <>
-      <Navmain/>
       <div className="cart-page">
         <div className="cart-page-left">
           <div className="cart-page-left-header">
