@@ -25,8 +25,7 @@ const Allfilters = ({ filterHeading, handleGoBack }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const { path, category } = useParams();
- 
-  let { loading } = useSelector((store) => store.ProductReducer)
+  let { loading, } = useSelector((store) => store.ProductReducer)
   const [sortrange, setsortrange] = useState(searchParams.getAll('sortrange') || [])
 
   const [brandrange, setbrandrange] = useState(searchParams.getAll('brandrange') || [])
@@ -48,7 +47,7 @@ const Allfilters = ({ filterHeading, handleGoBack }) => {
     brandrange && (params.brandrange = brandrange)
     pageno && (params.pageno = pageno);
     setSearchParams(params)
-  
+  // SetfilterSearchParams([filterSearchParams,searchParams.value])
   }, [categorytag, sortrange, brandrange, sortingByPrice, pageno])
 
   const handlechange = (e) => {
@@ -88,7 +87,6 @@ const Allfilters = ({ filterHeading, handleGoBack }) => {
 
   }
  
-
   return (
     <VStack p="10px" >
       <Flex w="full" justifyContent={"space-around"}>
@@ -204,7 +202,7 @@ const Allfilters = ({ filterHeading, handleGoBack }) => {
 
 
                   {
-                    category === 'men' && (<AccordionPanel pb={4}>
+                    category === 'men' || category === undefined && (<AccordionPanel pb={4}>
                       <Box p={1} >
                         <Checkbox isChecked={categorytag.includes("menaccessories")} name='categorytag' onChange={handlechange} my={2} value='menaccessories' >Men accessories</Checkbox>
                       </Box>
@@ -319,7 +317,7 @@ const Allfilters = ({ filterHeading, handleGoBack }) => {
                   }
 
                   {
-                    category === 'men' && (
+                    category === 'men' || category === undefined && (
 
                       <AccordionPanel >
                         <Box p={1} >
@@ -400,5 +398,5 @@ const Allfilters = ({ filterHeading, handleGoBack }) => {
 }
 
 
-export default Allfilters
+export default memo(Allfilters)
 
