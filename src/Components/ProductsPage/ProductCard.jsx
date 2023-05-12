@@ -86,7 +86,7 @@ useEffect(()=>{
 
 },[times])
 
-console.log(productsData)
+
 
  if(loading && times<5){
   return(
@@ -102,8 +102,7 @@ console.log(productsData)
 </Box>
 
   )
- }
- if(productsData.products.length<=0 || productsData.total==0 ){
+ }else if(productsData.products.length<=0 || error==true){
   return <NotfoundCategory />
 }
 // else if( loading==true && times>=10 ){

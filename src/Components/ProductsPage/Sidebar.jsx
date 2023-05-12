@@ -1,6 +1,6 @@
 import {
   Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, GridItem, Divider, Flex, Grid, Heading, HStack, Image, Select, Spinner, Text,
-  VStack,Skeleton, SkeletonCircle, SkeletonText ,
+  VStack,
   CloseButton,
 } from "@chakra-ui/react";
 import React, { useCallback, useEffect, useState } from "react";
@@ -41,7 +41,6 @@ const Sidebar = () => {
   }, []);
 
 
-  console.log(productsData,'...sidebar')
   useEffect(() => {
     let params = {};
     sortingByPrice && (params.sortingByPrice = sortingByPrice);
@@ -190,15 +189,9 @@ const Sidebar = () => {
                 ) : (
                   <>
                     {" "}
-                   
+                    <NotfoundCategory />
                   </>
                 )}
-{
-  productsData.total<=0 && (<> <NotfoundCategory/>  </>)
-}
-
-
-
               </Grid>
             </VStack>
           </GridItem>
