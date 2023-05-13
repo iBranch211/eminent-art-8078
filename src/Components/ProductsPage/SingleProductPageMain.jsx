@@ -7,6 +7,7 @@ import {
   Heading,
   HStack,
   Image,
+  Input,
   Text,
   useToast,
   VStack,
@@ -18,121 +19,121 @@ import {
   AccordionPanel,
   List,
   ListItem,
+  useDisclosure,
   Flex,
+  Spinner,
 } from "@chakra-ui/react";
-
-import { Link, useParams, useNavigate } from "react-router-dom";
+import {
+  addItemToCart,
+  addItemToWishlist,
+  getCart,
+  itemPresentInWishlist,
+} from "../../Pages/cart/useLocalStorage.js";
+import { Link, useParams, useNavigate, Navigate } from "react-router-dom";
 import { TbTruckDelivery } from "react-icons/tb";
 import { AiOutlineQuestionCircle, AiFillStar } from "react-icons/ai";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import discountoff from "../../Assests/singlepage.png";
 import { useDispatch, useSelector } from "react-redux";
-// import { getSingleProducts } from "../../Redux/ProductReducer/action";
-
+import {
+  addtocart,
+  getSingleProducts,
+} from "../../Redux/ProductReducer/action";
+import { memo } from "react";
+import NotfoundCategory from "../../Pages/NotfoundCategory";
+import Zoom from "react-img-zoom";
 import { Carousel } from "react-responsive-carousel";
-
+import { useState } from "react";
 import Navmain from "../HomePage/Navmain.jsx";
-import axios from "axios";
 
 const SingleProductPageMain = () => {
-  const token = localStorage.getItem("token");
+  const [itemInCart, setItemInCart] = useState(false);
+const toast=useToast()
+  // const [product, setProduct] = React.useState({});
 
-  const { id } = useParams();
-  //console.log(id);
-  const toast = useToast();
-  const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const handleGoBack = () => {
     navigate("/products");
   };
+ 
+  const { id } = useParams();
 
-  const [data, setData] = useState({});
-
+  const dispatch = useDispatch();
   let { loading, productsData } = useSelector((store) => store.ProductReducer);
-
-  //console.log(productsData.products);
-  useEffect(() => {
-    // window.scrollTo(0, 0);
-    const data = productsData.products.find((el) => el._id === id);
-    setData(data);
-  }, []);
-
-  // useEffect(() => {
-  //   dispatch(getSingleProducts(id));
-  // }, []);
-
-  const handleClick = () => {
-    const obj = {
-      image: data.image,
-      title: data.title,
-      price: data.price,
-      category: data.category,
-      quantity: 1,
-    };
-
-    axios
-      .post(`http://localhost:8080/trendify/cart/add`, obj, {
-        headers: {
-          Authorization: `${token}`,
-        },
-      })
-      .then((res) => {
-        console.log("res:", res);
-        if (res.data.msg === "Please Login First!!") {
-          toast({
-            title: "Login First!",
-            description:
-              "Please do login to your account or signup to start a new journey with us!",
-            status: "error",
-            duration: 4000,
-            isClosable: true,
-            position: "top",
-          });
-        } else {
-          toast({
-            title: "Product added to cart!!",
-            description: "The product is added to your cart",
-            status: "success",
-            duration: 4000,
-            isClosable: true,
-            position: "top",
-          });
-        }
-      })
-      .catch((err) => {
-        toast({
-          title: "Login First!",
-          description:
-            "Please do login to your account or signup to start a new journey with us!",
-          status: "error",
-          duration: 1000,
+  console.log(productsData)
+ let {product} =useSelector((store) => store.ProductReducer.productsData)
+  const handleAddToCart = (e) => {
+   
+    toast({
+      title: 'Product Added',
+          description: "Product added to Cart.",
+          status: 'success',
+          duration: 2000,
           isClosable: true,
-          position: "top",
-        });
-      });
-
-    // console.log(obj,"objClick")
+          position: 'top',
+    })
+    dispatch(addtocart(product));
   };
+  const cartItems = getCart();
+  const [cartItemsCount, setCartItemsCount] = useState(cartItems.length);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // console.log(getCart());
+    const cartItems = getCart();
+
+    cartItems.map((item) => {
+      if (item.id === id) setItemInCart(true);
+    
+    });
+  }, []);
+// console.log(product)
+
+  useEffect(() => {
+    dispatch(getSingleProducts(id))
+    // .then((res) =>{ 
+    //   console.log(res,'...useFee')
+    //   setProduct(res)})
+    //    .catch((err) => console.log(err));
+  }, []);
+console.log(product)
   const handlebuynow = () => {
     // Add logic to buy products
     toast({
-      title: "Redirecting..",
-      description: "Navigating To payment page.",
-      status: "success",
-      duration: 2000,
-      isClosable: true,
-      position: "top",
-    });
+      title: 'Redirecting..',
+          description: "Navigating To payment page.",
+          status: 'success',
+          duration: 2000,
+          isClosable: true,
+          position: 'top',
+    })
 
     navigate("/payments");
   };
+  
 
-  return (
-    <>
-      <Navmain />
-      {productsData.products && (
+  const addItem = () => {
+    addItemToCart({
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      rating: product.rating,
+      quantity: 1,
+      img: product.image,
+    });
+    //console.log(product);
+    window.alert('You Item has been added to Cart')
+    setItemInCart(true);
+    setCartItemsCount(getCart().length);
+  };
+
+  const cart = JSON.parse(localStorage.getItem("cartItems"));
+  
+
+    return (
+      <>
+        <Navmain />
+       { product && (
         <Box display={"grid"} py={10} pt={{ base: "30px", md: "120px" }}>
           <Flex ml={{ base: "2%", sm: "2%", md: "2%", lg: "2%" }}>
             <Button
@@ -143,10 +144,7 @@ const SingleProductPageMain = () => {
             </Button>
           </Flex>
           {/* Top section for image and prices */}
-          <Container
-            maxW={{ base: "80%", md: "95%", lg: "90%" }}
-            key={data._id}
-          >
+          <Container maxW={{ base: "80%", md: "95%", lg: "90%" }}>
             <Grid
               gridTemplateColumns={{
                 base: "100%",
@@ -162,14 +160,15 @@ const SingleProductPageMain = () => {
                 <Box display={{ base: "none", md: "none", lg: "block" }}>
                   <HStack justify={"space-between"}>
                     {/* left multiple images */}
+                   
 
                     <div style={{ width: "83%", marginTop: "80px", h: "7cm" }}>
                       <Carousel autoPlay>
                         <div>
-                          <img alt="1" src={data.image} />
+                          <img alt="1" src={product.image} />
                         </div>
                         <div>
-                          <img alt="2" src={data.image2} />
+                          <img alt="2" src={product.image2} />
                         </div>
                         <div>
                           <img
@@ -185,12 +184,16 @@ const SingleProductPageMain = () => {
                 <Box display={{ base: "block", md: "block", lg: "none" }}>
                   <VStack>
                     <Box overflow="hidden">
-                      <Image src={data.image} alt={"image"} objectFit="cover" />
+                      <Image
+                        src={product.image}
+                        alt={"image"}
+                        objectFit="cover"
+                      />
                     </Box>
                     <HStack align="flex-start">
                       <Box h="100px" overflow="hidden">
                         <Image
-                          src={data.image2 ? data.image2 : ""}
+                          src={product.image2 ? product.image2 : ""}
                           alt={`Image2`}
                           objectFit="cover"
                         />
@@ -207,7 +210,7 @@ const SingleProductPageMain = () => {
                   mb={3}
                   fontWeight={500}
                 >
-                  {data.title}
+                  {product.title}
                 </Heading>
 
                 <Box d="flex" alignItems="center" mb={3}>
@@ -220,7 +223,7 @@ const SingleProductPageMain = () => {
                             as={AiFillStar}
                             key={i}
                             color={
-                              i < Math.floor(data.rating)
+                              i < Math.floor(product.rating)
                                 ? "yellow.500"
                                 : "gray.300"
                             }
@@ -228,10 +231,10 @@ const SingleProductPageMain = () => {
                         ))}
                     </Text>
                     <Text ml={2} color="gray.500">
-                      ({data.rating})
+                      ({product.rating})
                     </Text>
                     <Text color={"#0076be"} fontWeight="medium">
-                      | <Link>Write a Review {data.reviews} </Link>
+                      | <Link>Write a Review {product.reviews} </Link>
                     </Text>
                   </HStack>
                 </Box>
@@ -242,7 +245,7 @@ const SingleProductPageMain = () => {
                     mb={3}
                     color={"#e53e3e"}
                   >
-                    Rs.{data.price}
+                    Rs.{product.price}
                   </Text>
                   <Text
                     textDecoration={"line-through"}
@@ -250,7 +253,7 @@ const SingleProductPageMain = () => {
                     mb={3}
                     color="gray.500"
                   >
-                    Rs.{data.price + 623}
+                    Rs.{product.price + 623}
                   </Text>
                   <Text fontSize="md" color="#24a3b5">
                     18% off
@@ -299,7 +302,7 @@ const SingleProductPageMain = () => {
                       w="200px"
                       size="lg"
                       backgroundImage="-webkit-linear-gradient(0deg,#ff934b 0%,#ff5e62 100%)"
-                      onClick={handleClick}
+                      onClick={addItem}
                     >
                       Add to cart
                     </Button>
@@ -447,9 +450,9 @@ const SingleProductPageMain = () => {
             </Box>
           </Container>
         </Box>
-      )}
-    </>
-  );
-};
+        )}
+      </>
+    );
+  }
 
 export default SingleProductPageMain;

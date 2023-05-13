@@ -28,7 +28,7 @@ const MobileNavbar = () => {
       <Image h="60px" src={logo} alt="logo" />
     </Link>
  {' '}
- <Link to='/cart' >
+ <Link to='/cartpage' >
      <Icon size='22px' colour='#24a3b5' as={BsCart3} />
      </Link>
   </Flex>
