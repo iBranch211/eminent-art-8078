@@ -7,7 +7,6 @@ import {
   Heading,
   HStack,
   Image,
-  Input,
   Text,
   useToast,
   VStack,
@@ -19,124 +18,121 @@ import {
   AccordionPanel,
   List,
   ListItem,
-  useDisclosure,
   Flex,
-  Spinner,
 } from "@chakra-ui/react";
-import {
-  addItemToCart,
-  addItemToWishlist,
-  getCart,
-  itemPresentInWishlist,
-} from "../../Pages/cart/useLocalStorage.js";
-import { Link, useParams, useNavigate, Navigate } from "react-router-dom";
+
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { TbTruckDelivery } from "react-icons/tb";
 import { AiOutlineQuestionCircle, AiFillStar } from "react-icons/ai";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import discountoff from "../../Assests/singlepage.png";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  addtocart,
-  getSingleProducts,
-} from "../../Redux/ProductReducer/action";
-import { memo } from "react";
-import NotfoundCategory from "../../Pages/NotfoundCategory";
-import Zoom from "react-img-zoom";
+// import { getSingleProducts } from "../../Redux/ProductReducer/action";
+
 import { Carousel } from "react-responsive-carousel";
-import { useState } from "react";
+
 import Navmain from "../HomePage/Navmain.jsx";
-import ColorPalette from "./ColorPalette.jsx";
+import axios from "axios";
 
 const SingleProductPageMain = () => {
-  const [itemInCart, setItemInCart] = useState(false);
-const toast=useToast()
-  // const [product, setProduct] = React.useState({});
+  const token = localStorage.getItem("token");
 
+  const { id } = useParams();
+  //console.log(id);
+  const toast = useToast();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const handleGoBack = () => {
     navigate("/products");
   };
-  const [selectedColor, setSelectedColor] = useState("blue");
-  const colors = ["blue", "green", "red", "yellow"];
 
-  const handleColorChange = (color) => {
-    setSelectedColor(color);
-  };
-  const { id } = useParams();
+  const [data, setData] = useState({});
 
-  const dispatch = useDispatch();
-  let { loading} = useSelector((store) => store.ProductReducer);
+  let { loading, productsData } = useSelector((store) => store.ProductReducer);
 
- let {product} =useSelector((store) => store.ProductReducer.productsData)
-  const handleAddToCart = (e) => {
-   
-    toast({
-      title: 'Product Added',
-          description: "Product added to Cart.",
-          status: 'success',
-          duration: 2000,
+  //console.log(productsData.products);
+  useEffect(() => {
+    // window.scrollTo(0, 0);
+    const data = productsData.products.find((el) => el._id === id);
+    setData(data);
+  }, []);
+
+  // useEffect(() => {
+  //   dispatch(getSingleProducts(id));
+  // }, []);
+
+  const handleClick = () => {
+    const obj = {
+      image: data.image,
+      title: data.title,
+      price: data.price,
+      category: data.category,
+      quantity: 1,
+    };
+
+    axios
+      .post(`http://localhost:8080/trendify/cart/add`, obj, {
+        headers: {
+          Authorization: `${token}`,
+        },
+      })
+      .then((res) => {
+        console.log("res:", res.token);
+        if (res.data.msg === "Please Login First!!") {
+          toast({
+            title: "Login First!",
+            description:
+              "Please do login to your account or signup to start a new journey with us!",
+            status: "error",
+            duration: 4000,
+            isClosable: true,
+            position: "top",
+          });
+        } else {
+          toast({
+            title: "Product added to cart!!",
+            description: "The product is added to your cart",
+            status: "success",
+            duration: 4000,
+            isClosable: true,
+            position: "top",
+          });
+        }
+      })
+      .catch((err) => {
+        toast({
+          title: "Login First!",
+          description:
+            "Please do login to your account or signup to start a new journey with us!",
+          status: "error",
+          duration: 1000,
           isClosable: true,
-          position: 'top',
-    })
-    dispatch(addtocart(product));
+          position: "top",
+        });
+      });
+
+    // console.log(obj,"objClick")
   };
-  const cartItems = getCart();
-  const [cartItemsCount, setCartItemsCount] = useState(cartItems.length);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    // console.log(getCart());
-    const cartItems = getCart();
-
-    cartItems.map((item) => {
-      if (item.id === id) setItemInCart(true);
-    
-    });
-  }, []);
-// console.log(product)
-
-  useEffect(() => {
-    dispatch(getSingleProducts(id))
-   
-  }, []);
 
   const handlebuynow = () => {
     // Add logic to buy products
     toast({
-      title: 'Redirecting..',
-          description: "Navigating To payment page.",
-          status: 'success',
-          duration: 2000,
-          isClosable: true,
-          position: 'top',
-    })
+      title: "Redirecting..",
+      description: "Navigating To payment page.",
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+      position: "top",
+    });
 
     navigate("/payments");
   };
-  
 
-  const addItem = () => {
-    addItemToCart({
-      id: product.id,
-      title: product.title,
-      price: product.price,
-      rating: product.rating,
-      quantity: 1,
-      img: product.image,
-    });
-    //console.log(product);
-    window.alert('You Item has been added to Cart')
-    setItemInCart(true);
-    setCartItemsCount(getCart().length);
-  };
-
-  const cart = JSON.parse(localStorage.getItem("cartItems"));
-  
-
-    return (
-      <>
-        <Navmain />
-       { product && (
+  return (
+    <>
+      <Navmain />
+      {productsData.products && (
         <Box display={"grid"} py={10} pt={{ base: "30px", md: "120px" }}>
           <Flex ml={{ base: "2%", sm: "2%", md: "2%", lg: "2%" }}>
             <Button
@@ -147,7 +143,10 @@ const toast=useToast()
             </Button>
           </Flex>
           {/* Top section for image and prices */}
-          <Container maxW={{ base: "80%", md: "95%", lg: "90%" }}>
+          <Container
+            maxW={{ base: "80%", md: "95%", lg: "90%" }}
+            key={data._id}
+          >
             <Grid
               gridTemplateColumns={{
                 base: "100%",
@@ -163,28 +162,21 @@ const toast=useToast()
                 <Box display={{ base: "none", md: "none", lg: "block" }}>
                   <HStack justify={"space-between"}>
                     {/* left multiple images */}
-                   
 
                     <div style={{ width: "83%", marginTop: "80px", h: "7cm" }}>
-                      <Carousel autoPlay={true} infiniteLoop={true} transitionTime={2000}   stopOnHover={false}>
+                      <Carousel autoPlay>
                         <div>
-                          <img alt="1" src={product.image} />
+                          <img alt="1" src={data.image} />
                         </div>
                         <div>
-                          <img alt="2" src={product.image2} />
+                          <img alt="2" src={data.image2} />
                         </div>
-                        
-{      product.images?.map((el,ind)=><div key={ind}>
-  <img
-    alt={el.substring(0,5)}
-    src={el}
-  />
-</div>   )
-}
-
-
-
-
+                        <div>
+                          <img
+                            alt=""
+                            src="https://th.bing.com/th/id/R.cbc82af939081036784d5a25eef97567?rik=kSY%2btYZ3WJEG%2bw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-0lMF5Ciqcc4%2fVqERZmlvEGI%2fAAAAAAAABVU%2fFLECfobh3Yg%2fs1600%2fShopclues-4th-aniversary-sale.png&ehk=MpFW%2fxBFlenYs8ePTe%2fJYjNOL19YnLcepuIGD5q2NWQ%3d&risl=&pid=ImgRaw&r=0"
+                          />
+                        </div>
                       </Carousel>
                     </div>
                   </HStack>
@@ -192,26 +184,18 @@ const toast=useToast()
                 {/* for small screen */}
                 <Box display={{ base: "block", md: "block", lg: "none" }}>
                   <VStack>
-                  <Carousel  w='50%' autoPlay={true} infiniteLoop={true} transitionTime={2000}  axis='vertical'  stopOnHover={false}>
-                        <div>
-                          <img alt="1" src={product.image} />
-                        </div>
-                        <div>
-                          <img alt="2" src={product.image2} />
-                        </div>
-                        
-{      product.images?.map((el,ind)=><div key={ind}>
-  <img
-    alt={el.substring(0,5)}
-    src={el}
-  />
-</div>   )
-}
-
-
-
-
-                      </Carousel>
+                    <Box overflow="hidden">
+                      <Image src={data.image} alt={"image"} objectFit="cover" />
+                    </Box>
+                    <HStack align="flex-start">
+                      <Box h="100px" overflow="hidden">
+                        <Image
+                          src={data.image2 ? data.image2 : ""}
+                          alt={`Image2`}
+                          objectFit="cover"
+                        />
+                      </Box>
+                    </HStack>
                   </VStack>
                 </Box>
               </Box>
@@ -223,7 +207,7 @@ const toast=useToast()
                   mb={3}
                   fontWeight={500}
                 >
-                  {product.title}
+                  {data.title}
                 </Heading>
 
                 <Box d="flex" alignItems="center" mb={3}>
@@ -236,7 +220,7 @@ const toast=useToast()
                             as={AiFillStar}
                             key={i}
                             color={
-                              i < Math.floor(product.rating)
+                              i < Math.floor(data.rating)
                                 ? "yellow.500"
                                 : "gray.300"
                             }
@@ -244,10 +228,10 @@ const toast=useToast()
                         ))}
                     </Text>
                     <Text ml={2} color="gray.500">
-                      ({product.rating})
+                      ({data.rating})
                     </Text>
                     <Text color={"#0076be"} fontWeight="medium">
-                      | <Link>Write a Review {product.reviews} </Link>
+                      | <Link>Write a Review {data.reviews} </Link>
                     </Text>
                   </HStack>
                 </Box>
@@ -258,7 +242,7 @@ const toast=useToast()
                     mb={3}
                     color={"#e53e3e"}
                   >
-                    Rs.{product.price}
+                    Rs.{data.price}
                   </Text>
                   <Text
                     textDecoration={"line-through"}
@@ -266,7 +250,7 @@ const toast=useToast()
                     mb={3}
                     color="gray.500"
                   >
-                    Rs.{product.price + 623}
+                    Rs.{data.price + 623}
                   </Text>
                   <Text fontSize="md" color="#24a3b5">
                     18% off
@@ -283,11 +267,6 @@ const toast=useToast()
 
                   <Box my={3}>
                     <Image src={discountoff} />
-                  </Box>
-                  <Box my={3} border='1mm solid black' w='max-content' p={5} borderRadius={'10px'}>
-                  <ColorPalette colors={colors} selectedColor={selectedColor} onColorChange={handleColorChange} />
-    
-    
                   </Box>
                 </Box>
 
@@ -320,7 +299,7 @@ const toast=useToast()
                       w="200px"
                       size="lg"
                       backgroundImage="-webkit-linear-gradient(0deg,#ff934b 0%,#ff5e62 100%)"
-                      onClick={addItem}
+                      onClick={handleClick}
                     >
                       Add to cart
                     </Button>
@@ -468,9 +447,9 @@ const toast=useToast()
             </Box>
           </Container>
         </Box>
-        )}
-      </>
-    );
-  }
+      )}
+    </>
+  );
+};
 
 export default SingleProductPageMain;
