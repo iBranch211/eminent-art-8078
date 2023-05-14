@@ -1,11 +1,11 @@
 import axios from "axios";
 import {
-  // ADD_PRODUCTS_SUCCESS,
+  ADD_PRODUCTS_SUCCESS,
   ADD_WISHLIST_SUCCESS,
   GET_PRODUCTS_ERROR,
   GET_PRODUCTS_LOADING,
   GET_PRODUCTS_SUCCESS,
-  // GET_CART_DATA,
+  GET_CART_DATA,
 } from "./actiontype";
 
 export const getAllProducts = (data) => (dispatch) => {
@@ -13,9 +13,7 @@ export const getAllProducts = (data) => (dispatch) => {
 
   try {
     axios
-      .get(`https://erin-dizzy-clam.cyclic.app/trendify/products`, {
-        params: data,
-      })
+      .get(`http://localhost:8080/trendify/products`,{params:data})
       .then((res) => {
         dispatch({
           type: GET_PRODUCTS_SUCCESS,
@@ -33,7 +31,7 @@ export const getProducts = (category, data) => (dispatch) => {
 
   try {
     axios
-      .get(`https://erin-dizzy-clam.cyclic.app/trendify/products/${category}`, {
+      .get(`http://localhost:8080/trendify/products/${category}`, {
         params: data,
       })
       .then((res) => {
@@ -55,7 +53,7 @@ export const getProductsSubcategory =
     try {
       axios
         .get(
-          `https://erin-dizzy-clam.cyclic.app/trendify/products/${category}/${subcategory}`,
+          `http://localhost:8080/trendify/products/${category}/${subcategory}`,
           { params: data }
         )
         .then((res) => {
@@ -77,7 +75,7 @@ export const getProductsSubSubcategory =
     try {
       axios
         .get(
-          `https://erin-dizzy-clam.cyclic.app/trendify/products/${category}/${subcategory}/${subcat2}`,
+          `http://localhost:8080/trendify/products/${category}/${subcategory}/${subcat2}`,
           { params: data }
         )
         .then((res) => {
@@ -97,7 +95,7 @@ export const getSingleProducts = (id) => (dispatch) => {
 
   axios
     .get(
-      `https://erin-dizzy-clam.cyclic.app/trendify/products/:category/:subcategory/single/${id}`
+      `http://localhost:8080/trendify/products/:category/:subcategory/single/${id}`
     )
     .then((res) => {
       dispatch({
@@ -129,7 +127,7 @@ export const getSingleProducts = (id) => (dispatch) => {
 // export const getCartData = (token) => (dispatch) => {
 //   dispatch({ type: GET_PRODUCTS_LOADING });
 //   axios
-//     .get("https://erin-dizzy-clam.cyclic.app/trendify/cart", {
+//     .get("http://localhost:8080/trendify/cart", {
 //       headers: {
 //         Authorization: `Bearer ${token}`,
 //       },
