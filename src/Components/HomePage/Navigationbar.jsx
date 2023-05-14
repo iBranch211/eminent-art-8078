@@ -28,8 +28,6 @@ import { NavLink, Link } from "react-router-dom";
 import { TbLogin } from "react-icons/tb";
 import NavDrop from "./NavDrop";
 import { AdminButton } from "../../Pages/Admin/AdminButton";
-import SearchBar from "../SearchBar"
-import LocationBox from "../LocationBox";
 const Navigationbar = () => {
 
 
@@ -52,7 +50,7 @@ const Navigationbar = () => {
     >
       <Flex justify="space-around">
         <Box w="15%" mx="20px">
-          <Center w="90%">
+          <Center w="80%">
             <button>
               <NavLink to="/">
                 <Image src={trendify_logo} />
@@ -74,14 +72,18 @@ const Navigationbar = () => {
             align="left"
             placeholder="What is on Your mind today?"
             p={1}
-            w="50%"
+            w="70%"
             backgroundColor="#e9f6f7"
             color="#353535"
             fontWeight={"400"}
-          
+            border="1px solid #dbf0f2"
           >
-            <SearchBar/>
-           
+            <EditablePreview
+              mx="20px"
+              border="none"
+              _placeholder={{ color: "gray.200", fontWeight: "400" }}
+            />
+            <EditableInput pl="20px" border="0px" textDecoration="none" />
           </Editable>
           <Button
             borderRadius="0"
@@ -94,7 +96,6 @@ const Navigationbar = () => {
           >
             Search
           </Button>
-          <LocationBox/>
         </HStack>
 
         <HStack

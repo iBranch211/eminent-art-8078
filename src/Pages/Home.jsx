@@ -16,7 +16,6 @@ import { BrandedDeals } from "./HomeComponents/BrandedDeals";
 import { FooterUpper } from "./HomeComponents/FooterUpper";
 import { Footer } from "./HomeComponents/Footer";
 import Navmain from "../Components/HomePage/Navmain";
-import Footer1 from "../Components/Footer1";
 
 export const Home = () => {
   const responsive = {
@@ -274,8 +273,7 @@ export const Home = () => {
       <BrandStore />
       <BrandedDeals />
       <FooterUpper />
-      {/* <Footer />  */}
-      <Footer1/>
+      <Footer />
     </>
   );
 };

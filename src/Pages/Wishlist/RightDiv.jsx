@@ -1,23 +1,21 @@
-import { Box, HStack, Text, Image, Button, VStack, useToast } from "@chakra-ui/react";
+import { Box, HStack, Text, Image, Button, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export const RightDiv = () => {
-  const toast = useToast();
-  let url="https://erin-dizzy-clam.cyclic.app/trendify/wishlist"
-  
+  let url="http://localhost:8080/trendify/wishlist"
   const naigate = useNavigate();
-
+  const [item, setItem] = useState("");
   const [wishlistData, setWishlistData] = useState([]);
-  const [render, setRender] = useState(false);
+  const [rerender, setRerender] = useState(false);
   const getData = () => {
     axios.get(url,{
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     }).then((res) => {
-      //console.log(res.data)
+      console.log(res.data)
       if(res.data.length)
      { setWishlistData(res.data);}
     });
@@ -25,30 +23,16 @@ export const RightDiv = () => {
 
   useEffect(() => {
     getData();
-  }, [wishlistData.length,render]);
- 
+  }, [wishlistData.length]);
+  console.log(item);
 
   const handleDelete = (item) => {
-    let id = item._id;
-    console.log(id,item)
-    axios.delete(`${url}/delete/${id}`, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
-      }}).then((res) => {
+    let id = +item.id;
+    axios.delete(`${url}/${id}`).then((res) => {
       console.log(res);
     });
-
-    toast({
-      title: "Successful!",
-        description:
-          "Product deleted to wishlist!!",
-        status: "success",
-        duration: 4000,
-        isClosable: true,
-        position: "top",
-    })
     getData();
-    setRender(!render);
+    setRerender(!rerender);
   };
 
   return (
@@ -82,7 +66,7 @@ export const RightDiv = () => {
             <HStack>
               <Image width={"100px"} src={item.image} />
               <Box>
-                <Text color={"orange"}>{item.name}</Text>
+                <Text>{item.title}</Text>
                 <Text textDecoration={"line-through"}>
                   ₹{+item.price + 100}{" "}
                 </Text>

@@ -18,23 +18,21 @@ import {
     const [search, setSearch] = useState([]);
     const [Products, setProducts] = useState([]);
     const [showDropdown, setShowDropdown] = useBoolean();
-    const throttledText = useThrottle(onChangeValue, 1000);
+    const throttledText = useThrottle(onChangeValue, 400);
   
-    const searchProducts = async () => {
-      const data = await fetch(`https://erin-dizzy-clam.cyclic.app/trendify/products`);
+    const searchMovies = async () => {
+      const data = await fetch(`http://localhost:4444/products`);//http://localhost:3000/cart
       const res = await data.json();
-      //console.log(res.products)
-    setProducts(res.products);
+      setProducts(res);
     };
     useEffect(() => {
-      searchProducts();
+      searchMovies();
     }, []);
     useEffect(() => {
       if (throttledText === "") {
         setSearch([]);
       } else {
-        //console.log(throttledText);
-        if(Products.length){
+        console.log(throttledText);
         let newSuggestions = Products.filter((item) => {
           return item.title
             .split(" ")
@@ -46,10 +44,9 @@ import {
         setSearch(newSuggestions);
         setShowDropdown.on();
       }
-    }
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [throttledText]);
-   // console.log(search);
+    console.log(search);
     const [add, setP] = useState("");
   
     return (
@@ -57,13 +54,13 @@ import {
         <Flex justify={"space-around"} minH={"40px"} py="10px" align={"center"}>
           <Flex
             gap={0.1}
-            width={{ base: "90%", md: "90%" }}
+            width={{ base: "100%", md: "60%" }}
             flexDir={{ base: "column", md: "row" }}
             align={"center"}
           >
             
             <Input
-             
+              ml={"20px"}
               variant="filled"
               placeholder="What is on Your mind today?"
               size="sm"
@@ -85,7 +82,7 @@ import {
               >
                 {search.map((item, i) => {
                   return (
-                    <Link href={`/products/:category/single/${item._id}`} key={i + 1}>
+                    <Link href={`/products/${item._id}`} key={i + 1}>
                       <Text
                         fontSize="16px"
                         p="10px"
