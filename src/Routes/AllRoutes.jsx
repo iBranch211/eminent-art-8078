@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import LoginPage from "../Pages/LoginPage";
+// import LoginPage from "../Pages/LoginPage";
 import NotFoundPage from "../Pages/NotFoundPage";
 import { AdminPage } from "../Pages/Admin/AdminPage";
 import { AdminProducts } from "../Pages/Admin/AdminProducts/AdminProducts";
@@ -15,7 +15,7 @@ import { PrivateRoute } from "../Components/PrivateRoute";
 // import Allfilters from "../Components/ProductsPage/Allfilters";
 import Sidebar from "../Components/ProductsPage/Sidebar";
 
-import Auth from "../Pages/Auth";
+// import Auth from "../Pages/Auth";
 
 import Cartpage from "../Pages/CartPage/Cartpage";
 import SignInPage from "../Pages/SignInPage";
@@ -29,20 +29,13 @@ const AllRoutes = () => {
 
       <Route path="/register" element={<SignUpPage />} />
 
-      <Route
-        path="/cart"
-        element={
-          // <PrivateRoute>
-          <Cartpage />
-          // </PrivateRoute>
-        }
-      />
+      <Route path="/cart" element={<Cartpage />} />
       <Route
         path="/wishlistpage"
         element={
-          <PrivateRoute>
-            <Wishlist />
-          </PrivateRoute>
+          // <PrivateRoute>
+          <Wishlist />
+          // </PrivateRoute>
         }
       />
       <Route
@@ -59,9 +52,9 @@ const AllRoutes = () => {
       <Route
         path="/payments"
         element={
-          <PrivateRoute>
-            <Payments />
-          </PrivateRoute>
+          // <PrivateRoute>
+          <Payments />
+          // </PrivateRoute>
         }
       />
       <Route

@@ -6,18 +6,17 @@ import {
   FormLabel,
   Heading,
   Input,
-  Link,
   Stack,
   Image,
   useToast,
+  Text,
 } from "@chakra-ui/react";
 import { FormErrorMessage } from "@chakra-ui/react";
 
 import React from "react";
 import axios from "axios";
-import { useContext } from "react";
-// import { AuthContext } from "../components/authContext";
-import { useNavigate } from "react-router-dom";
+
+import { useNavigate, Link } from "react-router-dom";
 
 import { useColorModeValue } from "@chakra-ui/react";
 import Navigationbar from "../Components/HomePage/Navigationbar";
@@ -52,7 +51,10 @@ export default function SignInPage() {
   const handleSubmit = async () => {
     try {
       axios
-        .post(`http://localhost:8080/trendify/users/login`, userData)
+        .post(
+          `https://erin-dizzy-clam.cyclic.app/trendify/users/login`,
+          userData
+        )
         .then((res) => {
           const getToken = res.data.token;
           const getName = res.data.Name;
@@ -61,23 +63,17 @@ export default function SignInPage() {
           localStorage.setItem("token", getToken);
           localStorage.setItem("UserName", getName);
 
-          // if (getToken && getName) {
+          toast({
+            title: "Sucessfully Login.",
+            description: "Please correct your detail.",
+            status: "success",
+            duration: 2000,
+            isClosable: true,
+            position: "top",
+          });
 
-          //   // Login(getToken);
-
-          //   toast({
-          //     title: "Sucessfully Login.",
-          //     description: "Please correct your detail.",
-          //     status: "success",
-          //     duration: 2000,
-          //     isClosable: true,
-          //     position: "top",
-          //   });
-
-          //   //console.log(authState);
-          //   //use this to useNavigate here
-          //   // Navigate("/");
-          // }
+          // use this to useNavigate here
+          Navigate("/");
         })
         .catch((error) => {
           // fill the correct detail
@@ -195,6 +191,14 @@ export default function SignInPage() {
               >
                 Sign in
               </Button>
+              <Stack pt={6}>
+                <Text align={"center"}>
+                  New User?{" "}
+                  <Link to="/register" style={{ color: "#34c7c7" }}>
+                    Register Here
+                  </Link>
+                </Text>
+              </Stack>
             </Stack>
           </Stack>
         </Flex>

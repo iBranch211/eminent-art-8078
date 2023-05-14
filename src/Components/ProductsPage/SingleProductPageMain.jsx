@@ -20,7 +20,7 @@ import {
   ListItem,
   Flex,
 } from "@chakra-ui/react";
-import './productspage.css'
+import "./productspage.css";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { TbTruckDelivery } from "react-icons/tb";
 import { AiOutlineQuestionCircle, AiFillStar } from "react-icons/ai";
@@ -32,7 +32,9 @@ import Navmain from "../HomePage/Navmain.jsx";
 import axios from "axios";
 import { getSingleProducts } from "../../Redux/ProductReducer/action";
 import ColorPalette from "./ColorPalette";
+
 import { Coupon, OneMoreOffer } from "./OneMoreOffer";
+import { AddtoWishlist } from "../../Redux/WishList/action";
 
 const SingleProductPageMain = () => {
   const token = localStorage.getItem("token");
@@ -53,31 +55,25 @@ const SingleProductPageMain = () => {
     navigate("/products");
   };
 
-  const [data, setData] = useState({});
-
   let { loading, productsData } = useSelector((store) => store.ProductReducer);
-  let {product} =useSelector((store) => store.ProductReducer.productsData)
-  //console.log(productsData.products);
+  let { product } = useSelector((store) => store.ProductReducer.productsData);
+
   useEffect(() => {
     // window.scrollTo(0, 0);
-    dispatch(getSingleProducts(id))
+    dispatch(getSingleProducts(id));
   }, []);
-
-  // useEffect(() => {
-  //   dispatch(getSingleProducts(id));
-  // }, []);
 
   const handleAddToCart = () => {
     const obj = {
-      image: data.image,
-      title: data.title,
-      price: data.price,
-      category: data.category,
+      image: product.image,
+      title: product.title,
+      price: product.price,
+      category: product.category,
       quantity: 1,
     };
 
     axios
-      .post(`http://localhost:8080/trendify/cart/add`, obj, {
+      .post(`https://erin-dizzy-clam.cyclic.app/trendify/cart/add`, obj, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -133,10 +129,42 @@ const SingleProductPageMain = () => {
     navigate("/payments");
   };
 
+  const handleAddToWishlist = (data) => {
+    let url = "https://erin-dizzy-clam.cyclic.app/trendify/wishlist";
+    //dispatch(AddtoWishlist(item))
+    let product = {
+      image: data.image,
+      name: data.title,
+      price: data.price,
+      category: data.category,
+      quantity: 1,
+    };
+
+    axios
+      .post(`${url}/add`, product, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((res) => {
+        // dispatch({ type: ADDTOWISHLIS_SUCCESS });
+        console.log("success");
+      });
+
+    toast({
+      title: "Successful!",
+      description: "Product Added to wishlist!!",
+      status: "success",
+      duration: 4000,
+      isClosable: true,
+      position: "top",
+    });
+  };
+
   return (
     <>
       <Navmain />
-      { product && (
+      {product && (
         <Box display={"grid"} py={10} pt={{ base: "30px", md: "120px" }}>
           <Flex ml={{ base: "2%", sm: "2%", md: "2%", lg: "2%" }}>
             <Button
@@ -163,24 +191,23 @@ const SingleProductPageMain = () => {
                 <Box display={{ base: "none", md: "none", lg: "block" }}>
                   <HStack justify={"space-between"}>
                     {/* left multiple images */}
-                   
+
                     <div style={{ width: "83%", marginTop: "80px", h: "7cm" }}>
-                      <Carousel autoPlay={true} infiniteLoop={true} transitionTime={2000}   stopOnHover={false}>
+                      <Carousel
+                        autoPlay={true}
+                        infiniteLoop={true}
+                        transitionTime={2000}
+                        stopOnHover={false}
+                      >
                         <div>
                           <img alt="1" src={product.image} />
                         </div>
-                                               
-{      product.images?.map((el,ind)=><div key={ind}>
-  <img
-    alt={el.substring(0,5)}
-    src={el}
-  />
-</div>   )
-}
 
-
-
-
+                        {product.images?.map((el, ind) => (
+                          <div key={ind}>
+                            <img alt={el.substring(0, 5)} src={el} />
+                          </div>
+                        ))}
                       </Carousel>
                     </div>
                   </HStack>
@@ -188,34 +215,41 @@ const SingleProductPageMain = () => {
                 {/* for small screen */}
                 <Box display={{ base: "block", md: "block", lg: "none" }}>
                   <VStack>
-                  <Carousel  w='50%' autoPlay={true} infiniteLoop={true} transitionTime={2000}  axis='vertical'  stopOnHover={false}>
-                        <div>
-                          <img alt="1" src={product.image} />
+                    <Carousel
+                      w="50%"
+                      autoPlay={true}
+                      infiniteLoop={true}
+                      transitionTime={2000}
+                      axis="vertical"
+                      stopOnHover={false}
+                    >
+                      <div>
+                        <img alt="1" src={product.image} />
+                      </div>
+                      <div>
+                        <img alt="2" src={product.image2} />
+                      </div>
+
+                      {product.images?.map((el, ind) => (
+                        <div key={ind}>
+                          <img alt={el.substring(0, 5)} src={el} />
                         </div>
-                        <div>
-                          <img alt="2" src={product.image2} />
-                        </div>
-                        
-{      product.images?.map((el,ind)=><div key={ind}>
-  <img
-    alt={el.substring(0,5)}
-    src={el}
-  />
-</div>   )
-}
-
-
-
-
-                      </Carousel>
+                      ))}
+                    </Carousel>
                   </VStack>
                 </Box>
               </Box>
 
               {/* Right sections */}
               <Box py={{ base: 6, md: 0 }} pl={{ md: 6 }} align="left">
-
-                <Heading textAlign='center' fontSize={'24px'} textTransform={'uppercase'} color={'#0076be'}>{product.brand}</Heading>
+                <Heading
+                  textAlign="center"
+                  fontSize={"24px"}
+                  textTransform={"uppercase"}
+                  color={"#0076be"}
+                >
+                  {product.brand}
+                </Heading>
                 <Heading
                   size={{ base: "md", md: "md", lg: "lg" }}
                   mb={3}
@@ -284,15 +318,21 @@ const SingleProductPageMain = () => {
 
                     {/* <OneMoreOffer/> 
    <Coupon product={product} />*/}
-
-                  </Box>
-                  <Box my={3} border='3px solid #0076be' w='max-content' p={3} borderRadius={'10px'} >
-                  <ColorPalette colors={colors} selectedColor={selectedColor} onColorChange={handleColorChange} />
-    
-    
                   </Box>
 
-
+                  <Box
+                    my={3}
+                    border="3px solid #0076be"
+                    w="max-content"
+                    p={3}
+                    borderRadius={"10px"}
+                  >
+                    <ColorPalette
+                      colors={colors}
+                      selectedColor={selectedColor}
+                      onColorChange={handleColorChange}
+                    />
+                  </Box>
                 </Box>
 
                 {/* <Divider borderColor={"black"}></Divider> */}
@@ -338,7 +378,7 @@ const SingleProductPageMain = () => {
                       Buy Now
                     </Button>{" "}
                   </HStack>
-                  <HStack textAlign='center' justifyContent='center'  >
+                  <HStack textAlign="center" justifyContent="center">
                     <Text
                       color={"#0076be"}
                       fontWeight={"medium"}
@@ -352,6 +392,7 @@ const SingleProductPageMain = () => {
                       fontWeight={"medium"}
                       // onClick={addtowishlist}
                       cursor="pointer"
+                      onClick={() => handleAddToWishlist(product)}
                     >
                       Add to Wish List
                     </Text>
@@ -387,7 +428,7 @@ const SingleProductPageMain = () => {
                       Numquam dolore aut, vero tenetur illum odit atque eveniet
                       accusamus laborum optio architecto? Non dolores rerum
                       impedit quas laborum facilis blanditiis voluptatibus.
-                                </Box>
+                    </Box>
                     <Box>
                       <Text
                         fontWeight="medium"
@@ -399,19 +440,14 @@ const SingleProductPageMain = () => {
                       </Text>
                       <Coupon Product={product} />
                       <List spacing="1">
-                     
                         <ListItem key={1}>
                           <Text
                             fontSize={{ base: "16", md: "18px" }}
                             fontWeight="medium"
                             display="inline-block"
                             w="35%"
-                          >
-                         
-                          </Text>
-                         
+                          ></Text>
                         </ListItem>
-                      
                       </List>
                     </Box>
                   </AccordionPanel>
@@ -466,7 +502,7 @@ const SingleProductPageMain = () => {
             </Box>
           </Container>
         </Box>
-        )}
+      )}
     </>
   );
 };
