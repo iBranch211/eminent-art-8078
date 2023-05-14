@@ -10,8 +10,8 @@ const Wishlist = () => {
   return (
     <>
     <Navmain/>
-    <Box  w="95%" m="auto" >
     <LocationBox/>
+    <Box  w="95%" m="auto" >
       <Box
         display={"flex"}
         flexDirection={{ base: "column",sm:"column", md:"row", lg: "row", xl:"row","2xl":"row" }}
