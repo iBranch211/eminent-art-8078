@@ -27,10 +27,7 @@ import { AiOutlineQuestionCircle, AiFillStar } from "react-icons/ai";
 import React, { useEffect, useState } from "react";
 import discountoff from "../../Assests/singlepage.png";
 import { useDispatch, useSelector } from "react-redux";
-// import { getSingleProducts } from "../../Redux/ProductReducer/action";
-
 import { Carousel } from "react-responsive-carousel";
-
 import Navmain from "../HomePage/Navmain.jsx";
 import axios from "axios";
 
@@ -38,9 +35,10 @@ const SingleProductPageMain = () => {
   const token = localStorage.getItem("token");
 
   const { id } = useParams();
-  //console.log(id);
+
   const toast = useToast();
   const dispatch = useDispatch();
+
   const navigate = useNavigate();
 
   const handleGoBack = () => {
