@@ -72,10 +72,11 @@ const SingleProductPageMain = () => {
     axios
       .post(`http://localhost:8080/trendify/cart/add`, obj, {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: `${token}`,
         },
       })
       .then((res) => {
+        console.log("res:", res.token);
         if (res.data.msg === "Please Login First!!") {
           toast({
             title: "Login First!",
