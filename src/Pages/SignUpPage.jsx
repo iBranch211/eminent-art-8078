@@ -15,12 +15,15 @@ import { FormErrorMessage } from "@chakra-ui/react";
 
 import React from "react";
 import axios from "axios";
-
+import { useContext } from "react";
 // import { AuthContext } from "../components/authContext";
 import { useNavigate } from "react-router-dom";
 
 import { useColorModeValue } from "@chakra-ui/react";
 import Navigationbar from "../Components/HomePage/Navigationbar";
+// import { CONFETTI_LIGHT, CONFETTI_DARK } from "../components/Confetti";
+// import Navbar from "../components/HomePage/Navbar";
+// import Footer from "../components/HomePage/Footer";
 
 export default function SignUpPage() {
   const [userData, setUserData] = React.useState({
@@ -39,7 +42,7 @@ export default function SignUpPage() {
 
   const toast = useToast();
 
-  const navigate = useNavigate();
+  const Navigate = useNavigate();
 
   React.useEffect(() => {
     if (!email && !password) {
@@ -51,21 +54,10 @@ export default function SignUpPage() {
   const handleSubmit = async () => {
     try {
       axios
-        .post(
-          `https://erin-dizzy-clam.cyclic.app/trendify/users/register`,
-          userData
-        )
+        .post(`https://erin-dizzy-clam.cyclic.app/trendify/users/register`, userData)
         .then((res) => {
-          // console.log(res, "user");
-          toast({
-            title: "Register Successfully!",
-            description: "Please go to Login.",
-            status: "success",
-            duration: 1000,
-            isClosable: true,
-            position: "top",
-          });
-          navigate("/login");
+          console.log(res, "user");
+          alert("Registet success");
         })
         .catch((error) => {
           // fill the correct detail

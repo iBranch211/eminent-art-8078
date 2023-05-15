@@ -34,16 +34,15 @@ const Pagination = ({ current, total, handlePageChange }) => {
     <Flex gap="5px" mt="20px" align="center">
       <IconButton
         size="md"
-        disabled={current === 1}
+        display={current === 1 ? "none" : "flex"}
         onClick={() => handlePageChange(1)}
         bg="transparent"
         aria-label="search productName"
         icon={<RxDoubleArrowLeft />}
-
       />
       <IconButton
         size="md"
-        disabled={current === 1}
+        display={current === 1 ? "none" : "flex"}
         onClick={() => handlePageChange(current - 1)}
         bg="transparent"
         aria-label="search productName"
@@ -52,7 +51,7 @@ const Pagination = ({ current, total, handlePageChange }) => {
       {btns}
       <IconButton
         size="md"
-        disabled={current === total}
+        display={current === total ? "none" : "flex"}
         onClick={() => handlePageChange(current + 1)}
         bg="transparent"
         aria-label="search productName"
@@ -60,7 +59,7 @@ const Pagination = ({ current, total, handlePageChange }) => {
       />
       <IconButton
         size="md"
-        disabled={current === total}
+        display={current === total ? "none" : "flex"}
         onClick={() => handlePageChange(total)}
         bg="transparent"
         aria-label="search productName"

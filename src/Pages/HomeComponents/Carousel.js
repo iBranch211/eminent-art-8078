@@ -1,17 +1,13 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { styled } from 'styled-components';
-
+import {Box} from "@chakra-ui/react"
 export const Carousels = () => (
-   
+    <div  style={{ display: "flex",zIndex:'-1' }} >
 
-       <div style={{ width: "98%",marginTop:"70px",margin:"auto" }}>
+       <div style={{ width: "83%",marginTop:"20px",paddingLeft:"20px" }} >
  
-            <Carousel autoPlay   showThumbs={false}
-        showStatus={false}
-        infiniteLoop
-       
-        style={{ display: "flex", justifyContent: "center" }}>
+            <Carousel autoPlay>
                 <div>
                     <img alt="" src="https://cdn.shopclues.com/images/banners/2023/Mar/31/HB1_Month_Web_Esha_31Mar23.jpg" />
 
@@ -28,19 +24,22 @@ export const Carousels = () => (
                     <img alt="" src="https://cdn.shopclues.com/images/banners/2023/Mar/01/Intel_Web_12thGenGaming.jpg" />
 
                 </div>
-                <div>
-                    <img alt="" src="https://cdn.shopclues.com/images/banners/2023/Jan/19/HB1_Refurb_Web_SYM_19Jan23.jpg" />
-
-                </div>
-                <div>
-                    <img alt="" src="https://cdn.shopclues.com/images/banners/2023/Jan/19/JMAX_HB2_Web_Riya_19Jan22.jpg" />
-
-                </div>
 
 
             </Carousel>
 
         </div>
-      
-  
+        <Box display={["none","none","block","block","block","block"]} mt="15px" >
+            <Box>
+                <img width={"183px"} src="https://cdn.shopclues.com/images/banners/2023/Feb/16/Platinum_Esha_16Feb23_01.jpg" alt="" />
+            </Box>
+            <Box>
+                <img width={"191px"}  src="https://cdn.shopclues.com/images/banners/2023/Feb/16/Platinum_Esha_16Feb23_02.jpg" alt="" />
+            </Box>
+            <Box>
+                <img width={"191px"}  src="https://cdn.shopclues.com/images/banners/2023/Feb/16/Platinum_Esha_16Feb23_03.jpg" alt="" />
+            </Box>
+        </Box>
+    </div>
+
 );

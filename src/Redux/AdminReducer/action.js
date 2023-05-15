@@ -7,19 +7,13 @@ import {
   ADMIN_PRODUCT_FALIURE,
   ADMIN_PRODUCT_REQUEST,
 } from "./actionType";
-import { localhosturl } from "../ProductReducer/action";
 
 export const getAdminProducts = (paramObj) => (dispatch) => {
   dispatch({ type: ADMIN_PRODUCT_REQUEST });
 
   axios
-    .get(`${localhosturl}/trendify/products/get/admin`, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
-      },
-    })
+    .get("http://localhost:4444/products", paramObj)
     .then((res) => {
-    
       dispatch({ type: ADMIN_GET_PRODUCT_SUCCESS, payload: res.data });
     })
     .catch(() => dispatch({ type: ADMIN_PRODUCT_FALIURE }));
@@ -29,9 +23,8 @@ export const adminaddProduct = (addData) => (dispatch) => {
   dispatch({ type: ADMIN_PRODUCT_REQUEST });
 
   axios
-    .post(`${localhosturl}/trendify/products/add`, addData)
-    .then((res) => {
-      console.log(res,'..admin')
+    .post("http://localhost:4444/products", addData)
+    .then(() => {
       dispatch({ type: ADMIN_ADD_PRODUCT_SUCCESS });
     })
     .catch(() => {
@@ -43,7 +36,7 @@ export const adminEditProduct = (editObj, id) => (dispatch) => {
   dispatch({ type: ADMIN_PRODUCT_REQUEST });
 
   return axios
-    .patch(`${localhosturl}/trendify/products/update/${id}`, editObj)
+    .patch(`http://localhost:4444/products/${id}`, editObj)
     .then(() => {
       dispatch({ type: ADMIN_EDIT_PRODUCT_SUCCESS });
     })
@@ -56,7 +49,7 @@ export const adminDeleteProduct = (id) => (dispatch) => {
   dispatch({ type: ADMIN_PRODUCT_REQUEST });
 
   return axios
-    .delete(`${localhosturl}/trendify/products/delete/${id}`)
+    .delete(`http://localhost:4444/products/${id}`)
     .then(() => {
       dispatch({ type: ADMIN_DELETE_PRODUCT });
     })

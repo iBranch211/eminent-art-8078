@@ -1,9 +1,8 @@
 import React from "react";
-import '../../Styles/ProductPage/ColourPallete.css';
-import {Box} from '@chakra-ui/react';
+import '../../Styles/ProductPage/ColourPallete.css'
 function ColorPalette({ colors, selectedColor, onColorChange }) {
   return (
-    <Box className="color-palette" display={{base:'none',lg:'block'}} >
+    <div className="color-palette">
         
       {colors.map((color) => (
         <button
@@ -13,7 +12,7 @@ function ColorPalette({ colors, selectedColor, onColorChange }) {
           onClick={() => onColorChange(color)}
         />
       ))}
-    </Box>
+    </div>
   );
 }
 
