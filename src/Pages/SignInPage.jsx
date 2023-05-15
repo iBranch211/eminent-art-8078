@@ -91,7 +91,7 @@ export default function SignInPage() {
           });
         });
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
   };
 

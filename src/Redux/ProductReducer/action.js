@@ -7,8 +7,8 @@ import {
   GET_PRODUCTS_SUCCESS,
   // GET_CART_DATA,
 } from "./actiontype";
-export const localhosturl = "https://erin-dizzy-clam.cyclic.app";
-// export const backenedURL = "";
+export const localhosturl = "http://localhost:8080";
+export const backenedURL = "https://erin-dizzy-clam.cyclic.app";
 
 //get all products
 
@@ -55,7 +55,7 @@ export const getSingleProducts = (id) => (dispatch) => {
 export const Addtowishlist = (data) => (dispatch) => {
   dispatch({ type: GET_PRODUCTS_LOADING });
   axios
-    .post(`${localhosturl}/trendify/wishlist`, data)
+    .post(`http://localhost:4444/wishlist`, data)
     .then((res) =>
       dispatch({
         type: ADD_WISHLIST_SUCCESS,
@@ -72,7 +72,7 @@ export const searchProducts = (title) => (dispatch) => {
 
   try {
     return axios.get(
-      `${localhosturl}/trendify/products/search?title=${title.toString()}`
+      `${backenedURL}/trendify/products/search?title=${title.toString()}`
     );
   } catch (error) {
     dispatch({ type: GET_PRODUCTS_ERROR, payload: error.message });
