@@ -24,7 +24,9 @@ import {
   PopoverBody,
   PopoverFooter,
   PopoverArrow,
-  PopoverCloseButton,useToast 
+  PopoverCloseButton,
+  useToast,
+  Text,
 } from "@chakra-ui/react";
 import React from "react";
 import trendify_logo from "../../Assests/trendifyLogo.jpeg";
@@ -36,28 +38,27 @@ import { NavLink, Link } from "react-router-dom";
 import { TbLogin } from "react-icons/tb";
 import NavDrop from "./NavDrop";
 import { AdminButton } from "../../Pages/Admin/AdminButton";
-import SearchBar from "../SearchBar"
+import SearchBar from "../SearchBar";
 import LocationBox from "../LocationBox";
 const Navigationbar = () => {
+  const toast = useToast();
+  let tokenfromlocal = localStorage.getItem("token") || "";
+  let UserName = localStorage.getItem("UserName");
 
-const toast=useToast()
-let tokenfromlocal=localStorage.getItem("token") || ""
   //let auth = JSON.parse(localStorage.getItem("auth"))||{user:""}
-  //console.log(auth.user.name)
-const handleLogout=()=>{
-  localStorage.removeItem("token")
-  localStorage.removeItem("UserName")
 
-  toast({
-    title: 'Succesfully Log Out',
-    description: "Shop more",
-    status: 'success',
-    duration: 2000,
-    isClosable: true,
-  })
-}
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("UserName");
 
-
+    toast({
+      title: "Succesfully Log Out",
+      description: "Shop more",
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+    });
+  };
 
   return (
     <Box
@@ -74,7 +75,7 @@ const handleLogout=()=>{
       backgroundColor="#fff"
     >
       <Flex justify="space-around">
-        <Box w="15%" mx="20px">
+        <Box w="15%" mx="20px" my="5px">
           <Center w="90%">
             <button>
               <NavLink to="/">
@@ -88,7 +89,7 @@ const handleLogout=()=>{
             cursor="pointer"
             w="20px"
             h="20px"
-            width="20px"
+            width={{ base: "10px", md: "10px", lg: "20px" }}
             ml="5px"
             as={BsSearch}
             backgroundColor="#e9f6f7"
@@ -96,19 +97,16 @@ const handleLogout=()=>{
           <Editable
             align="left"
             placeholder="What is on Your mind today?"
-            p={1}
-            w="50%"
+            w={{ base: "50%", md: "40%", lg: "50%" }}
             backgroundColor="#e9f6f7"
             color="#353535"
             fontWeight={"400"}
-          
           >
-            <SearchBar/>
-           
+            <SearchBar />
           </Editable>
           <Button
             borderRadius="0"
-            width="100px"
+            width={{ base: "10px", md: "70px", lg: "100px" }}
             h="auto 40px"
             lineHeight="14px"
             p="13px 25px"
@@ -117,7 +115,7 @@ const handleLogout=()=>{
           >
             Search
           </Button>
-          <LocationBox/>
+          <LocationBox />
         </HStack>
 
         <HStack
@@ -128,18 +126,17 @@ const handleLogout=()=>{
           ml="-150px"
         >
           <Icon as={CiLocationOn} />
-          <Popover trigger={"hover"} placement='bottom' strategy='absolute'>
-  <PopoverTrigger>
-   <Icon as={BsBell} />
-  </PopoverTrigger>
-  <PopoverContent fontSize='20px' position='absolute' top='100%' >
-    <PopoverArrow />
-    <PopoverCloseButton />
-    <PopoverHeader>Empty 😀</PopoverHeader>
-    <PopoverBody>You have read all notifications</PopoverBody>
-  </PopoverContent>
-</Popover>
-         
+          <Popover trigger={"hover"} placement="bottom" strategy="absolute">
+            <PopoverTrigger>
+              <Icon as={BsBell} />
+            </PopoverTrigger>
+            <PopoverContent fontSize="20px" position="absolute" top="100%">
+              <PopoverArrow />
+              <PopoverCloseButton />
+              <PopoverHeader>Empty 😀</PopoverHeader>
+              <PopoverBody>You have read all notifications</PopoverBody>
+            </PopoverContent>
+          </Popover>
 
           <Link to="/wishlistpage">
             {" "}
@@ -160,18 +157,20 @@ const handleLogout=()=>{
             ></MenuButton>
             <MenuList fontSize="14px">
               <MenuItem>
-                {
-                  tokenfromlocal != '' ? <Button onClick={handleLogout}>Log Out</Button> : <NavLink to="/login">LOGIN/SIGNUP</NavLink>
-                }
+                {tokenfromlocal != "" ? (
+                  <Button onClick={handleLogout}>Log Out</Button>
+                ) : (
+                  <NavLink to="/login">LOGIN/SIGNUP</NavLink>
+                )}
               </MenuItem>
               <MenuDivider m={0} />
-              <AdminButton />
-           
-             
+              {/* <AdminButton /> */}
             </MenuList>
           </Menu>
         </HStack>
-        <Box w="3%">{/* username */}</Box>
+        <Box w="5%" mt="2%" color="green" fontSize={"l"}>
+          <Flex w="100px">{!UserName ? "" : `Hi ${UserName}`} </Flex>
+        </Box>
       </Flex>
       <NavDrop />
     </Box>
